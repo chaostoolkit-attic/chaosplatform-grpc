@@ -13,15 +13,16 @@ This is the authentication service of the [Chaos Platform][chaosplatform].
 
 ## Purpose
 
-* Provide a REST api to manage access tokens
-* Provide a gRPC api to manage access tokens
-* Provide a web entrypoint to register a new user using an OAuth2 provider
+* Provide gRPC client stubs for the Chaos Platform services
+* Provide gRPC server stubs for the Chaos Platform services
 
 ## Content
 
 * [Install]
+* [Generate] from the protobug definitions
 
 [install]: ./docs/install.md
+[generate]: ./docs/generate.md
 
 ## Contribute
 
