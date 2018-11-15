@@ -1,0 +1,9 @@
+requests-mock
+coverage
+pycodestyle
+pytest
+pytest-cov
+pytest-sugar
+pylama
+grpcio-tools==1.16.1
+wheel>=0.32.1
