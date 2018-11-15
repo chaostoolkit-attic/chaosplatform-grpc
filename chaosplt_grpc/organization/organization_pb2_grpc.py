@@ -21,8 +21,8 @@ class OrganizationServiceStub(object):
         )
     self.Delete = channel.unary_unary(
         '/chaoshub.organization.OrganizationService/Delete',
-        request_serializer=organization_dot_organization__pb2.TerminateRequest.SerializeToString,
-        response_deserializer=organization_dot_organization__pb2.TerminateReply.FromString,
+        request_serializer=organization_dot_organization__pb2.DeleteRequest.SerializeToString,
+        response_deserializer=organization_dot_organization__pb2.DeleteReply.FromString,
         )
     self.ByUser = channel.unary_unary(
         '/chaoshub.organization.OrganizationService/ByUser',
@@ -66,8 +66,8 @@ def add_OrganizationServiceServicer_to_server(servicer, server):
       ),
       'Delete': grpc.unary_unary_rpc_method_handler(
           servicer.Delete,
-          request_deserializer=organization_dot_organization__pb2.TerminateRequest.FromString,
-          response_serializer=organization_dot_organization__pb2.TerminateReply.SerializeToString,
+          request_deserializer=organization_dot_organization__pb2.DeleteRequest.FromString,
+          response_serializer=organization_dot_organization__pb2.DeleteReply.SerializeToString,
       ),
       'ByUser': grpc.unary_unary_rpc_method_handler(
           servicer.ByUser,
@@ -77,97 +77,4 @@ def add_OrganizationServiceServicer_to_server(servicer, server):
   }
   generic_handler = grpc.method_handlers_generic_handler(
       'chaoshub.organization.OrganizationService', rpc_method_handlers)
-  server.add_generic_rpc_handlers((generic_handler,))
-
-
-class OrganizationStorageServiceStub(object):
-  """Storage service 
-  """
-
-  def __init__(self, channel):
-    """Constructor.
-
-    Args:
-      channel: A grpc.Channel.
-    """
-    self.Save = channel.unary_unary(
-        '/chaoshub.organization.OrganizationStorageService/Save',
-        request_serializer=organization_dot_organization__pb2.SaveRequest.SerializeToString,
-        response_deserializer=organization_dot_organization__pb2.SaveReply.FromString,
-        )
-    self.Remove = channel.unary_unary(
-        '/chaoshub.organization.OrganizationStorageService/Remove',
-        request_serializer=organization_dot_organization__pb2.RemoveRequest.SerializeToString,
-        response_deserializer=organization_dot_organization__pb2.RemoveReply.FromString,
-        )
-    self.Load = channel.unary_unary(
-        '/chaoshub.organization.OrganizationStorageService/Load',
-        request_serializer=organization_dot_organization__pb2.LoadRequest.SerializeToString,
-        response_deserializer=organization_dot_organization__pb2.LoadReply.FromString,
-        )
-    self.LoadMany = channel.unary_unary(
-        '/chaoshub.organization.OrganizationStorageService/LoadMany',
-        request_serializer=organization_dot_organization__pb2.LoadManyRequest.SerializeToString,
-        response_deserializer=organization_dot_organization__pb2.LoadManyReply.FromString,
-        )
-
-
-class OrganizationStorageServiceServicer(object):
-  """Storage service 
-  """
-
-  def Save(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def Remove(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def Load(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def LoadMany(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-
-def add_OrganizationStorageServiceServicer_to_server(servicer, server):
-  rpc_method_handlers = {
-      'Save': grpc.unary_unary_rpc_method_handler(
-          servicer.Save,
-          request_deserializer=organization_dot_organization__pb2.SaveRequest.FromString,
-          response_serializer=organization_dot_organization__pb2.SaveReply.SerializeToString,
-      ),
-      'Remove': grpc.unary_unary_rpc_method_handler(
-          servicer.Remove,
-          request_deserializer=organization_dot_organization__pb2.RemoveRequest.FromString,
-          response_serializer=organization_dot_organization__pb2.RemoveReply.SerializeToString,
-      ),
-      'Load': grpc.unary_unary_rpc_method_handler(
-          servicer.Load,
-          request_deserializer=organization_dot_organization__pb2.LoadRequest.FromString,
-          response_serializer=organization_dot_organization__pb2.LoadReply.SerializeToString,
-      ),
-      'LoadMany': grpc.unary_unary_rpc_method_handler(
-          servicer.LoadMany,
-          request_deserializer=organization_dot_organization__pb2.LoadManyRequest.FromString,
-          response_serializer=organization_dot_organization__pb2.LoadManyReply.SerializeToString,
-      ),
-  }
-  generic_handler = grpc.method_handlers_generic_handler(
-      'chaoshub.organization.OrganizationStorageService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))
