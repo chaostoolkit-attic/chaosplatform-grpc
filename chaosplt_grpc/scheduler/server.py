@@ -24,7 +24,7 @@ class SchedulerService(SchedulerServiceServicer):
         return ScheduleReply(job_id=job_id)
 
     def Cancel(self, request: CancelRequest, context) -> CancelReply:
-        self.cancel(request.id)
+        self.cancel(request.job_id)
         return CancelReply()
 
     def schedule(self, schedule_id: str, user_id: str, org_id: str,
