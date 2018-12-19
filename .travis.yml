@@ -5,6 +5,9 @@ env:
   global:
     - LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so
     - SEGFAULT_SIGNALS=all
+    - PYPI_USER_NAME: chaostoolkit
+    - secure: "UinMl1A2E3UZkWE45z++xG+2RN25QR4BLu+qR8wDBQ+n7Lid4G9/NMgJSHil8I5V9hSg7oOTgeLEW4e4MT+e7qUmHVdBkr8gHXgy7R3mWl6Ry0pVldqC7gOJqlv9//7mYLLxM1+zV8HyPgapvuVIhN4eLZADeTGS7W/98sBRu1G8LjORoH9VupVSxX+1Qe3KOGjcCJylsEhSkfkVnonb8Ty36Ho5+ejKO2jePhrCxYeWHuZY7BnqTiBYq8zEEq+FfJNtVT/3EJ/mP1fn6Aa3cRP1p5Rkp1R7NAk9kgxwzuZGR4c1oD3Mft03bCYtsIhzTv3+FnLbNyoRhVOmb8B1hcWl9O2fObsCKAsYDlQ+9oLYtSr/DnXq9zjxORlab8qRZrJM8IDkxyyPf/kv+Y6uFioP6cxPlE1aZbLfSsKN+7AGWdC7hCtCLRN1DI6zIpPXxDE0bYUYCgthgmbxBxzRknDZ9rwdRkLl7vOoswonwdA0RyBm7T5H8Hv1TdtFIZSy9vKnTCl03Nmudpnzv52fn+NQFVv7lBbNOtVLKNTbfEghchTW2Tw1y5e1YpD1ERF4Jndh8ofrbrd55fSZlfZK7aOokyJdshGOG5hafJtS3r6LPx20NCNMfKiUGcVGH5qI3rE0AMkQ8AN+TS+TSUmRcZm93EBFmXeoVnk3bZJ1Idc="
+
 python:
   - "3.6"
   - "3.7-dev"
@@ -12,7 +15,7 @@ install:
   - virtualenv --version
   - easy_install --version
   - pip --version
-  - pip install -r requirements.txt -r requirements-dev.txt
+  - pip install --pre -r requirements.txt -r requirements-dev.txt
 script:
   - bash ci.bash
 notifications:
