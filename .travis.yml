@@ -14,6 +14,7 @@ python:
 install:
   - virtualenv --version
   - easy_install --version
+  - pip install -U pip
   - pip --version
   - pip install --pre -r requirements.txt -r requirements-dev.txt
 script:
