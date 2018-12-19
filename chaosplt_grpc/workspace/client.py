@@ -5,7 +5,7 @@ from grpc import Channel
 
 from .workspace_pb2_grpc import WorkspaceServiceStub
 from .message import CreateRequest, GetByUserRequest, Workspace, \
-    RemoveRequest
+    DeleteRequest
 
 __all__ = ["create_workspace", "delete_workspace", "get_workspaces_for_user"]
 
@@ -24,7 +24,7 @@ def delete_workspace(channel: Channel, workspace_id: str) -> NoReturn:
     Delete a workspace.
     """
     stub = WorkspaceServiceStub(channel)
-    stub.Delete(RemoveRequest(workspace_id=workspace_id))
+    stub.Delete(DeleteRequest(id=workspace_id))
 
 
 def get_workspaces_for_user(channel: Channel, user_id: str) -> List[Workspace]:

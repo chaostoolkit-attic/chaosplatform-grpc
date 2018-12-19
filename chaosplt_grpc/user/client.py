@@ -6,8 +6,7 @@ from grpc import Channel
 from .user_pb2_grpc import UserServiceStub
 from .message import CreateRequest, DeleteRequest, User
 
-__all__ = ["create_user", "delete_user", "save_user",
-           "remove_User", "load_User", "load_Users"]
+__all__ = ["create_user", "delete_user"]
 
 
 def create_user(channel: Channel, username: str) -> User:
@@ -24,4 +23,4 @@ def delete_user(channel: Channel, user_id: str) -> NoReturn:
     Delete a user.
     """
     stub = UserServiceStub(channel)
-    stub.Delete(DeleteRequest(user_id=user_id))
+    stub.Delete(DeleteRequest(id=user_id))

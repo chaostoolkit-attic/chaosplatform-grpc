@@ -5,11 +5,10 @@ from grpc import Channel
 
 from .organization_pb2_grpc import OrganizationServiceStub
 from .message import CreateRequest, GetByUserRequest, Organization, \
-    LoadRequest, LoadManyRequest, RemoveRequest
+    DeleteRequest
 
 __all__ = ["create_organization", "delete_organization",
-           "get_organizations_for_user", "save_organization",
-           "remove_organization", "load_organization", "load_organizations"]
+           "get_organizations_for_user"]
 
 
 def create_organization(channel: Channel, name: str,
@@ -27,7 +26,7 @@ def delete_organization(channel: Channel, org_id: str) -> NoReturn:
     Delete an organization.
     """
     stub = OrganizationServiceStub(channel)
-    response = stub.Delete(RemoveRequest(org_id=org_id))
+    stub.Delete(DeleteRequest(id=org_id))
 
 
 def get_organizations_for_user(channel: Channel,
