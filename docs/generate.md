@@ -5,5 +5,5 @@ in the repository:
 
 ```
 $ git submodule update --remote --rebase
-$ bash generate.sh
+$ bash generate.bash
 ```
