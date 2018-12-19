@@ -5,7 +5,7 @@ from grpc import Channel
 
 from .workspace_pb2_grpc import WorkspaceServiceStub
 from .message import CreateRequest, GetByUserRequest, Workspace, \
-    LoadRequest, LoadManyRequest, RemoveRequest
+    RemoveRequest
 
 __all__ = ["create_workspace", "delete_workspace", "get_workspaces_for_user"]
 
