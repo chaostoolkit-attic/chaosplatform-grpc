@@ -6,7 +6,7 @@ from grpc import Channel, Server
 from .user_pb2_grpc import add_UserServiceServicer_to_server, \
     UserServiceServicer
 from .message import CreateRequest, CreateReply, DeleteRequest, DeleteReply, \
-    GetByUserRequest, GetByUserReply, User
+    User
 
 __all__ = ["UserService", "register_user_service"]
 
