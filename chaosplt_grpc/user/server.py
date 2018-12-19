@@ -3,7 +3,7 @@ from typing import List, NoReturn
 import grpc
 from grpc import Channel, Server
 
-from .auth_pb2_grpc import add_UserServiceServicer_to_server, \
+from .user_pb2_grpc import add_UserServiceServicer_to_server, \
     UserServiceServicer
 from .message import CreateRequest, CreateReply, DeleteRequest, DeleteReply, \
     GetByUserRequest, GetByUserReply, User
