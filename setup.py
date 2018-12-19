@@ -43,7 +43,7 @@ setup(
     zip_safe=False,
     python_requires='>=3.6.*',
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: Unix',
