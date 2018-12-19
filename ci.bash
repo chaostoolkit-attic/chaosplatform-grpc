@@ -13,12 +13,12 @@ function build () {
 
 function run-test () {
     echo "Running the tests"
-    python setup.py test
+    pytest
 }
 
 function release () {
     echo "Releasing the package"
-    python setup.py release
+    python setup.py sdist bdist_wheel
 
     echo "Publishing to PyPI"
     pip install twine
