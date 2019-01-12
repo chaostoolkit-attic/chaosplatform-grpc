@@ -19,7 +19,7 @@ This is the authentication service of the [Chaos Platform][chaosplatform].
 ## Content
 
 * [Install]
-* [Generate] from the protobug definitions
+* [Generate] from the protobug definitions
 
 [install]: ./docs/install.md
 [generate]: ./docs/generate.md

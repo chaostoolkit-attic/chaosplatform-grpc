@@ -6,7 +6,7 @@ from grpc import Channel, Server
 
 __all__ = ["remote_channel", "create_grpc_server", "start_grpc_server",
            "stop_grpc_server"]
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 
 @contextmanager
