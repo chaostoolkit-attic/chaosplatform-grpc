@@ -3,6 +3,7 @@
 import io
 import re
 from os.path import abspath, dirname, join, normpath
+import sys
 
 from setuptools import find_packages, setup
 
