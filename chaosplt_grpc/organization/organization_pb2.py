@@ -16,10 +16,10 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='organization/organization.proto',
-  package='chaoshub.organization',
+  package='chaosplatform.organization',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x1forganization/organization.proto\x12\x15\x63haoshub.organization\" \n\x04User\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"9\n\x0cOrganization\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0f\n\x07user_id\x18\x03 \x01(\t\".\n\rCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\"H\n\x0b\x43reateReply\x12\x39\n\x0corganization\x18\x02 \x01(\x0b\x32#.chaoshub.organization.Organization\"J\n\rDeleteRequest\x12\x39\n\x0corganization\x18\x01 \x01(\x0b\x32#.chaoshub.organization.Organization\"\r\n\x0b\x44\x65leteReply\"=\n\x10GetByUserRequest\x12)\n\x04user\x18\x01 \x01(\x0b\x32\x1b.chaoshub.organization.User\"L\n\x0eGetByUserReply\x12:\n\rorganizations\x18\x01 \x03(\x0b\x32#.chaoshub.organization.Organization2\x97\x02\n\x13OrganizationService\x12R\n\x06\x43reate\x12$.chaoshub.organization.CreateRequest\x1a\".chaoshub.organization.CreateReply\x12R\n\x06\x44\x65lete\x12$.chaoshub.organization.DeleteRequest\x1a\".chaoshub.organization.DeleteReply\x12X\n\x06\x42yUser\x12\'.chaoshub.organization.GetByUserRequest\x1a%.chaoshub.organization.GetByUserReplyb\x06proto3')
+  serialized_pb=_b('\n\x1forganization/organization.proto\x12\x1a\x63haosplatform.organization\" \n\x04User\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"9\n\x0cOrganization\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0f\n\x07user_id\x18\x03 \x01(\t\".\n\rCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\"M\n\x0b\x43reateReply\x12>\n\x0corganization\x18\x02 \x01(\x0b\x32(.chaosplatform.organization.Organization\"\x1b\n\rDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\t\"\r\n\x0b\x44\x65leteReply\"#\n\x10GetByUserRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\"Q\n\x0eGetByUserReply\x12?\n\rorganizations\x18\x01 \x03(\x0b\x32(.chaosplatform.organization.Organization2\xb5\x02\n\x13OrganizationService\x12\\\n\x06\x43reate\x12).chaosplatform.organization.CreateRequest\x1a\'.chaosplatform.organization.CreateReply\x12\\\n\x06\x44\x65lete\x12).chaosplatform.organization.DeleteRequest\x1a\'.chaosplatform.organization.DeleteReply\x12\x62\n\x06\x42yUser\x12,.chaosplatform.organization.GetByUserRequest\x1a*.chaosplatform.organization.GetByUserReplyb\x06proto3')
 )
 
 
@@ -27,20 +27,20 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _USER = _descriptor.Descriptor(
   name='User',
-  full_name='chaoshub.organization.User',
+  full_name='chaosplatform.organization.User',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='chaoshub.organization.User.id', index=0,
+      name='id', full_name='chaosplatform.organization.User.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='chaoshub.organization.User.name', index=1,
+      name='name', full_name='chaosplatform.organization.User.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -58,34 +58,34 @@ _USER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=58,
-  serialized_end=90,
+  serialized_start=63,
+  serialized_end=95,
 )
 
 
 _ORGANIZATION = _descriptor.Descriptor(
   name='Organization',
-  full_name='chaoshub.organization.Organization',
+  full_name='chaosplatform.organization.Organization',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='chaoshub.organization.Organization.id', index=0,
+      name='id', full_name='chaosplatform.organization.Organization.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='chaoshub.organization.Organization.name', index=1,
+      name='name', full_name='chaosplatform.organization.Organization.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_id', full_name='chaoshub.organization.Organization.user_id', index=2,
+      name='user_id', full_name='chaosplatform.organization.Organization.user_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -103,27 +103,27 @@ _ORGANIZATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=92,
-  serialized_end=149,
+  serialized_start=97,
+  serialized_end=154,
 )
 
 
 _CREATEREQUEST = _descriptor.Descriptor(
   name='CreateRequest',
-  full_name='chaoshub.organization.CreateRequest',
+  full_name='chaosplatform.organization.CreateRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='chaoshub.organization.CreateRequest.name', index=0,
+      name='name', full_name='chaosplatform.organization.CreateRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_id', full_name='chaoshub.organization.CreateRequest.user_id', index=1,
+      name='user_id', full_name='chaosplatform.organization.CreateRequest.user_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -141,20 +141,20 @@ _CREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=151,
-  serialized_end=197,
+  serialized_start=156,
+  serialized_end=202,
 )
 
 
 _CREATEREPLY = _descriptor.Descriptor(
   name='CreateReply',
-  full_name='chaoshub.organization.CreateReply',
+  full_name='chaosplatform.organization.CreateReply',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='organization', full_name='chaoshub.organization.CreateReply.organization', index=0,
+      name='organization', full_name='chaosplatform.organization.CreateReply.organization', index=0,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -172,22 +172,22 @@ _CREATEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=199,
-  serialized_end=271,
+  serialized_start=204,
+  serialized_end=281,
 )
 
 
 _DELETEREQUEST = _descriptor.Descriptor(
   name='DeleteRequest',
-  full_name='chaoshub.organization.DeleteRequest',
+  full_name='chaosplatform.organization.DeleteRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='organization', full_name='chaoshub.organization.DeleteRequest.organization', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='id', full_name='chaosplatform.organization.DeleteRequest.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -203,14 +203,14 @@ _DELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=273,
-  serialized_end=347,
+  serialized_start=283,
+  serialized_end=310,
 )
 
 
 _DELETEREPLY = _descriptor.Descriptor(
   name='DeleteReply',
-  full_name='chaoshub.organization.DeleteReply',
+  full_name='chaosplatform.organization.DeleteReply',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -227,22 +227,22 @@ _DELETEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=349,
-  serialized_end=362,
+  serialized_start=312,
+  serialized_end=325,
 )
 
 
 _GETBYUSERREQUEST = _descriptor.Descriptor(
   name='GetByUserRequest',
-  full_name='chaoshub.organization.GetByUserRequest',
+  full_name='chaosplatform.organization.GetByUserRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='user', full_name='chaoshub.organization.GetByUserRequest.user', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='user_id', full_name='chaosplatform.organization.GetByUserRequest.user_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -258,20 +258,20 @@ _GETBYUSERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=364,
-  serialized_end=425,
+  serialized_start=327,
+  serialized_end=362,
 )
 
 
 _GETBYUSERREPLY = _descriptor.Descriptor(
   name='GetByUserReply',
-  full_name='chaoshub.organization.GetByUserReply',
+  full_name='chaosplatform.organization.GetByUserReply',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='organizations', full_name='chaoshub.organization.GetByUserReply.organizations', index=0,
+      name='organizations', full_name='chaosplatform.organization.GetByUserReply.organizations', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -289,13 +289,11 @@ _GETBYUSERREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=427,
-  serialized_end=503,
+  serialized_start=364,
+  serialized_end=445,
 )
 
 _CREATEREPLY.fields_by_name['organization'].message_type = _ORGANIZATION
-_DELETEREQUEST.fields_by_name['organization'].message_type = _ORGANIZATION
-_GETBYUSERREQUEST.fields_by_name['user'].message_type = _USER
 _GETBYUSERREPLY.fields_by_name['organizations'].message_type = _ORGANIZATION
 DESCRIPTOR.message_types_by_name['User'] = _USER
 DESCRIPTOR.message_types_by_name['Organization'] = _ORGANIZATION
@@ -310,56 +308,56 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), dict(
   DESCRIPTOR = _USER,
   __module__ = 'organization.organization_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.organization.User)
+  # @@protoc_insertion_point(class_scope:chaosplatform.organization.User)
   ))
 _sym_db.RegisterMessage(User)
 
 Organization = _reflection.GeneratedProtocolMessageType('Organization', (_message.Message,), dict(
   DESCRIPTOR = _ORGANIZATION,
   __module__ = 'organization.organization_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.organization.Organization)
+  # @@protoc_insertion_point(class_scope:chaosplatform.organization.Organization)
   ))
 _sym_db.RegisterMessage(Organization)
 
 CreateRequest = _reflection.GeneratedProtocolMessageType('CreateRequest', (_message.Message,), dict(
   DESCRIPTOR = _CREATEREQUEST,
   __module__ = 'organization.organization_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.organization.CreateRequest)
+  # @@protoc_insertion_point(class_scope:chaosplatform.organization.CreateRequest)
   ))
 _sym_db.RegisterMessage(CreateRequest)
 
 CreateReply = _reflection.GeneratedProtocolMessageType('CreateReply', (_message.Message,), dict(
   DESCRIPTOR = _CREATEREPLY,
   __module__ = 'organization.organization_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.organization.CreateReply)
+  # @@protoc_insertion_point(class_scope:chaosplatform.organization.CreateReply)
   ))
 _sym_db.RegisterMessage(CreateReply)
 
 DeleteRequest = _reflection.GeneratedProtocolMessageType('DeleteRequest', (_message.Message,), dict(
   DESCRIPTOR = _DELETEREQUEST,
   __module__ = 'organization.organization_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.organization.DeleteRequest)
+  # @@protoc_insertion_point(class_scope:chaosplatform.organization.DeleteRequest)
   ))
 _sym_db.RegisterMessage(DeleteRequest)
 
 DeleteReply = _reflection.GeneratedProtocolMessageType('DeleteReply', (_message.Message,), dict(
   DESCRIPTOR = _DELETEREPLY,
   __module__ = 'organization.organization_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.organization.DeleteReply)
+  # @@protoc_insertion_point(class_scope:chaosplatform.organization.DeleteReply)
   ))
 _sym_db.RegisterMessage(DeleteReply)
 
 GetByUserRequest = _reflection.GeneratedProtocolMessageType('GetByUserRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETBYUSERREQUEST,
   __module__ = 'organization.organization_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.organization.GetByUserRequest)
+  # @@protoc_insertion_point(class_scope:chaosplatform.organization.GetByUserRequest)
   ))
 _sym_db.RegisterMessage(GetByUserRequest)
 
 GetByUserReply = _reflection.GeneratedProtocolMessageType('GetByUserReply', (_message.Message,), dict(
   DESCRIPTOR = _GETBYUSERREPLY,
   __module__ = 'organization.organization_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.organization.GetByUserReply)
+  # @@protoc_insertion_point(class_scope:chaosplatform.organization.GetByUserReply)
   ))
 _sym_db.RegisterMessage(GetByUserReply)
 
@@ -367,16 +365,16 @@ _sym_db.RegisterMessage(GetByUserReply)
 
 _ORGANIZATIONSERVICE = _descriptor.ServiceDescriptor(
   name='OrganizationService',
-  full_name='chaoshub.organization.OrganizationService',
+  full_name='chaosplatform.organization.OrganizationService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=506,
-  serialized_end=785,
+  serialized_start=448,
+  serialized_end=757,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',
-    full_name='chaoshub.organization.OrganizationService.Create',
+    full_name='chaosplatform.organization.OrganizationService.Create',
     index=0,
     containing_service=None,
     input_type=_CREATEREQUEST,
@@ -385,7 +383,7 @@ _ORGANIZATIONSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='Delete',
-    full_name='chaoshub.organization.OrganizationService.Delete',
+    full_name='chaosplatform.organization.OrganizationService.Delete',
     index=1,
     containing_service=None,
     input_type=_DELETEREQUEST,
@@ -394,7 +392,7 @@ _ORGANIZATIONSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='ByUser',
-    full_name='chaoshub.organization.OrganizationService.ByUser',
+    full_name='chaosplatform.organization.OrganizationService.ByUser',
     index=2,
     containing_service=None,
     input_type=_GETBYUSERREQUEST,

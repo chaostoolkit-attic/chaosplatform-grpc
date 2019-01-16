@@ -15,17 +15,17 @@ class OrganizationServiceStub(object):
       channel: A grpc.Channel.
     """
     self.Create = channel.unary_unary(
-        '/chaoshub.organization.OrganizationService/Create',
+        '/chaosplatform.organization.OrganizationService/Create',
         request_serializer=organization_dot_organization__pb2.CreateRequest.SerializeToString,
         response_deserializer=organization_dot_organization__pb2.CreateReply.FromString,
         )
     self.Delete = channel.unary_unary(
-        '/chaoshub.organization.OrganizationService/Delete',
+        '/chaosplatform.organization.OrganizationService/Delete',
         request_serializer=organization_dot_organization__pb2.DeleteRequest.SerializeToString,
         response_deserializer=organization_dot_organization__pb2.DeleteReply.FromString,
         )
     self.ByUser = channel.unary_unary(
-        '/chaoshub.organization.OrganizationService/ByUser',
+        '/chaosplatform.organization.OrganizationService/ByUser',
         request_serializer=organization_dot_organization__pb2.GetByUserRequest.SerializeToString,
         response_deserializer=organization_dot_organization__pb2.GetByUserReply.FromString,
         )
@@ -76,5 +76,5 @@ def add_OrganizationServiceServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'chaoshub.organization.OrganizationService', rpc_method_handlers)
+      'chaosplatform.organization.OrganizationService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

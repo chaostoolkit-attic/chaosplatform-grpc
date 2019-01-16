@@ -2,7 +2,15 @@
 
 ## [Unreleased][]
 
-[Unreleased]: https://github.com/chaostoolkit/chaosplatform-grpc/compare/0.1.1...HEAD
+[Unreleased]: https://github.com/chaostoolkit/chaosplatform-grpc/compare/0.2.0...HEAD
+
+## [0.2.0][] - 2019-01-16
+
+[0.2.0]: https://github.com/chaostoolkit/chaosplatform-auth/compare/0.1.1...0.2.0
+
+### Changed
+
+-  Updated to latest protos definition
 
 ## [0.1.1][] - 2019-01-12
 

@@ -15,12 +15,12 @@ class UserServiceStub(object):
       channel: A grpc.Channel.
     """
     self.Create = channel.unary_unary(
-        '/chaoshub.user.UserService/Create',
+        '/chaosplatform.user.UserService/Create',
         request_serializer=user_dot_user__pb2.CreateRequest.SerializeToString,
         response_deserializer=user_dot_user__pb2.CreateReply.FromString,
         )
     self.Delete = channel.unary_unary(
-        '/chaoshub.user.UserService/Delete',
+        '/chaosplatform.user.UserService/Delete',
         request_serializer=user_dot_user__pb2.DeleteRequest.SerializeToString,
         response_deserializer=user_dot_user__pb2.DeleteReply.FromString,
         )
@@ -59,5 +59,5 @@ def add_UserServiceServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'chaoshub.user.UserService', rpc_method_handlers)
+      'chaosplatform.user.UserService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

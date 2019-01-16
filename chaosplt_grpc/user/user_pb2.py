@@ -16,10 +16,10 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='user/user.proto',
-  package='chaoshub.user',
+  package='chaosplatform.user',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0fuser/user.proto\x12\rchaoshub.user\"$\n\x04User\x12\n\n\x02id\x18\x01 \x01(\t\x12\x10\n\x08username\x18\x02 \x01(\t\"!\n\rCreateRequest\x12\x10\n\x08username\x18\x01 \x01(\t\"0\n\x0b\x43reateReply\x12!\n\x04user\x18\x02 \x01(\x0b\x32\x13.chaoshub.user.User\"\x1b\n\rDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\t\"\r\n\x0b\x44\x65leteReply2\x95\x01\n\x0bUserService\x12\x42\n\x06\x43reate\x12\x1c.chaoshub.user.CreateRequest\x1a\x1a.chaoshub.user.CreateReply\x12\x42\n\x06\x44\x65lete\x12\x1c.chaoshub.user.DeleteRequest\x1a\x1a.chaoshub.user.DeleteReplyb\x06proto3')
+  serialized_pb=_b('\n\x0fuser/user.proto\x12\x12\x63haosplatform.user\"$\n\x04User\x12\n\n\x02id\x18\x01 \x01(\t\x12\x10\n\x08username\x18\x02 \x01(\t\"!\n\rCreateRequest\x12\x10\n\x08username\x18\x01 \x01(\t\"5\n\x0b\x43reateReply\x12&\n\x04user\x18\x02 \x01(\x0b\x32\x18.chaosplatform.user.User\"\x1b\n\rDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\t\"\r\n\x0b\x44\x65leteReply2\xa9\x01\n\x0bUserService\x12L\n\x06\x43reate\x12!.chaosplatform.user.CreateRequest\x1a\x1f.chaosplatform.user.CreateReply\x12L\n\x06\x44\x65lete\x12!.chaosplatform.user.DeleteRequest\x1a\x1f.chaosplatform.user.DeleteReplyb\x06proto3')
 )
 
 
@@ -27,20 +27,20 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _USER = _descriptor.Descriptor(
   name='User',
-  full_name='chaoshub.user.User',
+  full_name='chaosplatform.user.User',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='chaoshub.user.User.id', index=0,
+      name='id', full_name='chaosplatform.user.User.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='username', full_name='chaoshub.user.User.username', index=1,
+      name='username', full_name='chaosplatform.user.User.username', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -58,20 +58,20 @@ _USER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34,
-  serialized_end=70,
+  serialized_start=39,
+  serialized_end=75,
 )
 
 
 _CREATEREQUEST = _descriptor.Descriptor(
   name='CreateRequest',
-  full_name='chaoshub.user.CreateRequest',
+  full_name='chaosplatform.user.CreateRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='username', full_name='chaoshub.user.CreateRequest.username', index=0,
+      name='username', full_name='chaosplatform.user.CreateRequest.username', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -89,20 +89,20 @@ _CREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=72,
-  serialized_end=105,
+  serialized_start=77,
+  serialized_end=110,
 )
 
 
 _CREATEREPLY = _descriptor.Descriptor(
   name='CreateReply',
-  full_name='chaoshub.user.CreateReply',
+  full_name='chaosplatform.user.CreateReply',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='user', full_name='chaoshub.user.CreateReply.user', index=0,
+      name='user', full_name='chaosplatform.user.CreateReply.user', index=0,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -120,20 +120,20 @@ _CREATEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=107,
-  serialized_end=155,
+  serialized_start=112,
+  serialized_end=165,
 )
 
 
 _DELETEREQUEST = _descriptor.Descriptor(
   name='DeleteRequest',
-  full_name='chaoshub.user.DeleteRequest',
+  full_name='chaosplatform.user.DeleteRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='chaoshub.user.DeleteRequest.id', index=0,
+      name='id', full_name='chaosplatform.user.DeleteRequest.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -151,14 +151,14 @@ _DELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=157,
-  serialized_end=184,
+  serialized_start=167,
+  serialized_end=194,
 )
 
 
 _DELETEREPLY = _descriptor.Descriptor(
   name='DeleteReply',
-  full_name='chaoshub.user.DeleteReply',
+  full_name='chaosplatform.user.DeleteReply',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -175,8 +175,8 @@ _DELETEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=186,
-  serialized_end=199,
+  serialized_start=196,
+  serialized_end=209,
 )
 
 _CREATEREPLY.fields_by_name['user'].message_type = _USER
@@ -190,35 +190,35 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), dict(
   DESCRIPTOR = _USER,
   __module__ = 'user.user_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.user.User)
+  # @@protoc_insertion_point(class_scope:chaosplatform.user.User)
   ))
 _sym_db.RegisterMessage(User)
 
 CreateRequest = _reflection.GeneratedProtocolMessageType('CreateRequest', (_message.Message,), dict(
   DESCRIPTOR = _CREATEREQUEST,
   __module__ = 'user.user_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.user.CreateRequest)
+  # @@protoc_insertion_point(class_scope:chaosplatform.user.CreateRequest)
   ))
 _sym_db.RegisterMessage(CreateRequest)
 
 CreateReply = _reflection.GeneratedProtocolMessageType('CreateReply', (_message.Message,), dict(
   DESCRIPTOR = _CREATEREPLY,
   __module__ = 'user.user_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.user.CreateReply)
+  # @@protoc_insertion_point(class_scope:chaosplatform.user.CreateReply)
   ))
 _sym_db.RegisterMessage(CreateReply)
 
 DeleteRequest = _reflection.GeneratedProtocolMessageType('DeleteRequest', (_message.Message,), dict(
   DESCRIPTOR = _DELETEREQUEST,
   __module__ = 'user.user_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.user.DeleteRequest)
+  # @@protoc_insertion_point(class_scope:chaosplatform.user.DeleteRequest)
   ))
 _sym_db.RegisterMessage(DeleteRequest)
 
 DeleteReply = _reflection.GeneratedProtocolMessageType('DeleteReply', (_message.Message,), dict(
   DESCRIPTOR = _DELETEREPLY,
   __module__ = 'user.user_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.user.DeleteReply)
+  # @@protoc_insertion_point(class_scope:chaosplatform.user.DeleteReply)
   ))
 _sym_db.RegisterMessage(DeleteReply)
 
@@ -226,16 +226,16 @@ _sym_db.RegisterMessage(DeleteReply)
 
 _USERSERVICE = _descriptor.ServiceDescriptor(
   name='UserService',
-  full_name='chaoshub.user.UserService',
+  full_name='chaosplatform.user.UserService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=202,
-  serialized_end=351,
+  serialized_start=212,
+  serialized_end=381,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',
-    full_name='chaoshub.user.UserService.Create',
+    full_name='chaosplatform.user.UserService.Create',
     index=0,
     containing_service=None,
     input_type=_CREATEREQUEST,
@@ -244,7 +244,7 @@ _USERSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='Delete',
-    full_name='chaoshub.user.UserService.Delete',
+    full_name='chaosplatform.user.UserService.Delete',
     index=1,
     containing_service=None,
     input_type=_DELETEREQUEST,

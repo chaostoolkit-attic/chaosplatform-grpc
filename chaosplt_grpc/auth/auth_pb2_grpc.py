@@ -15,14 +15,29 @@ class AuthServiceStub(object):
       channel: A grpc.Channel.
     """
     self.Create = channel.unary_unary(
-        '/chaoshub.auth.AuthService/Create',
+        '/chaosplatform.auth.AuthService/Create',
         request_serializer=auth_dot_auth__pb2.CreateRequest.SerializeToString,
         response_deserializer=auth_dot_auth__pb2.CreateReply.FromString,
         )
     self.Delete = channel.unary_unary(
-        '/chaoshub.auth.AuthService/Delete',
+        '/chaosplatform.auth.AuthService/Delete',
         request_serializer=auth_dot_auth__pb2.DeleteRequest.SerializeToString,
         response_deserializer=auth_dot_auth__pb2.DeleteReply.FromString,
+        )
+    self.Get = channel.unary_unary(
+        '/chaosplatform.auth.AuthService/Get',
+        request_serializer=auth_dot_auth__pb2.GetRequest.SerializeToString,
+        response_deserializer=auth_dot_auth__pb2.GetReply.FromString,
+        )
+    self.GetByName = channel.unary_unary(
+        '/chaosplatform.auth.AuthService/GetByName',
+        request_serializer=auth_dot_auth__pb2.GetByUserNameRequest.SerializeToString,
+        response_deserializer=auth_dot_auth__pb2.GetByUserNameReply.FromString,
+        )
+    self.GetByUser = channel.unary_unary(
+        '/chaosplatform.auth.AuthService/GetByUser',
+        request_serializer=auth_dot_auth__pb2.GetByUserRequest.SerializeToString,
+        response_deserializer=auth_dot_auth__pb2.GetByUserReply.FromString,
         )
 
 
@@ -44,6 +59,27 @@ class AuthServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def Get(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetByName(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetByUser(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_AuthServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -57,7 +93,22 @@ def add_AuthServiceServicer_to_server(servicer, server):
           request_deserializer=auth_dot_auth__pb2.DeleteRequest.FromString,
           response_serializer=auth_dot_auth__pb2.DeleteReply.SerializeToString,
       ),
+      'Get': grpc.unary_unary_rpc_method_handler(
+          servicer.Get,
+          request_deserializer=auth_dot_auth__pb2.GetRequest.FromString,
+          response_serializer=auth_dot_auth__pb2.GetReply.SerializeToString,
+      ),
+      'GetByName': grpc.unary_unary_rpc_method_handler(
+          servicer.GetByName,
+          request_deserializer=auth_dot_auth__pb2.GetByUserNameRequest.FromString,
+          response_serializer=auth_dot_auth__pb2.GetByUserNameReply.SerializeToString,
+      ),
+      'GetByUser': grpc.unary_unary_rpc_method_handler(
+          servicer.GetByUser,
+          request_deserializer=auth_dot_auth__pb2.GetByUserRequest.FromString,
+          response_serializer=auth_dot_auth__pb2.GetByUserReply.SerializeToString,
+      ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'chaoshub.auth.AuthService', rpc_method_handlers)
+      'chaosplatform.auth.AuthService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

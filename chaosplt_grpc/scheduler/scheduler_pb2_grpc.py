@@ -15,12 +15,12 @@ class SchedulerServiceStub(object):
       channel: A grpc.Channel.
     """
     self.Schedule = channel.unary_unary(
-        '/chaoshub.schedule.SchedulerService/Schedule',
+        '/chaosplatform.schedule.SchedulerService/Schedule',
         request_serializer=scheduler_dot_scheduler__pb2.ScheduleRequest.SerializeToString,
         response_deserializer=scheduler_dot_scheduler__pb2.ScheduleReply.FromString,
         )
     self.Cancel = channel.unary_unary(
-        '/chaoshub.schedule.SchedulerService/Cancel',
+        '/chaosplatform.schedule.SchedulerService/Cancel',
         request_serializer=scheduler_dot_scheduler__pb2.CancelRequest.SerializeToString,
         response_deserializer=scheduler_dot_scheduler__pb2.CancelReply.FromString,
         )
@@ -59,5 +59,5 @@ def add_SchedulerServiceServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'chaoshub.schedule.SchedulerService', rpc_method_handlers)
+      'chaosplatform.schedule.SchedulerService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

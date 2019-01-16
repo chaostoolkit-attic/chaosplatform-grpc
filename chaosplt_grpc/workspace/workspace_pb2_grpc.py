@@ -15,17 +15,17 @@ class WorkspaceServiceStub(object):
       channel: A grpc.Channel.
     """
     self.Create = channel.unary_unary(
-        '/chaoshub.workspace.WorkspaceService/Create',
+        '/chaosplatform.workspace.WorkspaceService/Create',
         request_serializer=workspace_dot_workspace__pb2.CreateRequest.SerializeToString,
         response_deserializer=workspace_dot_workspace__pb2.CreateReply.FromString,
         )
     self.Delete = channel.unary_unary(
-        '/chaoshub.workspace.WorkspaceService/Delete',
-        request_serializer=workspace_dot_workspace__pb2.TerminateRequest.SerializeToString,
-        response_deserializer=workspace_dot_workspace__pb2.TerminateReply.FromString,
+        '/chaosplatform.workspace.WorkspaceService/Delete',
+        request_serializer=workspace_dot_workspace__pb2.DeleteRequest.SerializeToString,
+        response_deserializer=workspace_dot_workspace__pb2.DeleteReply.FromString,
         )
     self.ByUser = channel.unary_unary(
-        '/chaoshub.workspace.WorkspaceService/ByUser',
+        '/chaosplatform.workspace.WorkspaceService/ByUser',
         request_serializer=workspace_dot_workspace__pb2.GetByUserRequest.SerializeToString,
         response_deserializer=workspace_dot_workspace__pb2.GetByUserReply.FromString,
         )
@@ -66,8 +66,8 @@ def add_WorkspaceServiceServicer_to_server(servicer, server):
       ),
       'Delete': grpc.unary_unary_rpc_method_handler(
           servicer.Delete,
-          request_deserializer=workspace_dot_workspace__pb2.TerminateRequest.FromString,
-          response_serializer=workspace_dot_workspace__pb2.TerminateReply.SerializeToString,
+          request_deserializer=workspace_dot_workspace__pb2.DeleteRequest.FromString,
+          response_serializer=workspace_dot_workspace__pb2.DeleteReply.SerializeToString,
       ),
       'ByUser': grpc.unary_unary_rpc_method_handler(
           servicer.ByUser,
@@ -76,5 +76,5 @@ def add_WorkspaceServiceServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'chaoshub.workspace.WorkspaceService', rpc_method_handlers)
+      'chaosplatform.workspace.WorkspaceService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

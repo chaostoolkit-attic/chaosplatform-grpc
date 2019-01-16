@@ -16,10 +16,10 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='scheduler/scheduler.proto',
-  package='chaoshub.schedule',
+  package='chaosplatform.schedule',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x19scheduler/scheduler.proto\x12\x11\x63haoshub.schedule\"\x9f\x02\n\x08Schedule\x12\x13\n\x0bschedule_id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0e\n\x06org_id\x18\x03 \x01(\t\x12\x14\n\x0cworkspace_id\x18\x04 \x01(\t\x12\x15\n\rexperiment_id\x18\x05 \x01(\t\x12\x10\n\x08token_id\x18\x06 \x01(\t\x12\r\n\x05token\x18\x07 \x01(\t\x12\x11\n\tscheduled\x18\x08 \x01(\t\x12\x12\n\nexperiment\x18\t \x01(\t\x12\x10\n\x08interval\x18\n \x01(\x05\x12\x0e\n\x06repeat\x18\x0b \x01(\x05\x12\x0c\n\x04\x63ron\x18\x0c \x01(\t\x12\x10\n\x08settings\x18\r \x01(\t\x12\x15\n\rconfiguration\x18\x0e \x01(\t\x12\x0f\n\x07secrets\x18\x0f \x01(\t\"@\n\x0fScheduleRequest\x12-\n\x08schedule\x18\x01 \x01(\x0b\x32\x1b.chaoshub.schedule.Schedule\"\x1f\n\rScheduleReply\x12\x0e\n\x06job_id\x18\x01 \x01(\t\"\x1f\n\rCancelRequest\x12\x0e\n\x06job_id\x18\x01 \x01(\t\"\r\n\x0b\x43\x61ncelReply2\xb0\x01\n\x10SchedulerService\x12P\n\x08Schedule\x12\".chaoshub.schedule.ScheduleRequest\x1a .chaoshub.schedule.ScheduleReply\x12J\n\x06\x43\x61ncel\x12 .chaoshub.schedule.CancelRequest\x1a\x1e.chaoshub.schedule.CancelReplyb\x06proto3')
+  serialized_pb=_b('\n\x19scheduler/scheduler.proto\x12\x16\x63haosplatform.schedule\"\x9f\x02\n\x08Schedule\x12\x13\n\x0bschedule_id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0e\n\x06org_id\x18\x03 \x01(\t\x12\x14\n\x0cworkspace_id\x18\x04 \x01(\t\x12\x15\n\rexperiment_id\x18\x05 \x01(\t\x12\x10\n\x08token_id\x18\x06 \x01(\t\x12\r\n\x05token\x18\x07 \x01(\t\x12\x11\n\tscheduled\x18\x08 \x01(\t\x12\x12\n\nexperiment\x18\t \x01(\t\x12\x10\n\x08interval\x18\n \x01(\x05\x12\x0e\n\x06repeat\x18\x0b \x01(\x05\x12\x0c\n\x04\x63ron\x18\x0c \x01(\t\x12\x10\n\x08settings\x18\r \x01(\t\x12\x15\n\rconfiguration\x18\x0e \x01(\t\x12\x0f\n\x07secrets\x18\x0f \x01(\t\"E\n\x0fScheduleRequest\x12\x32\n\x08schedule\x18\x01 \x01(\x0b\x32 .chaosplatform.schedule.Schedule\"\x1f\n\rScheduleReply\x12\x0e\n\x06job_id\x18\x01 \x01(\t\"\x1f\n\rCancelRequest\x12\x0e\n\x06job_id\x18\x01 \x01(\t\"\r\n\x0b\x43\x61ncelReply2\xc4\x01\n\x10SchedulerService\x12Z\n\x08Schedule\x12\'.chaosplatform.schedule.ScheduleRequest\x1a%.chaosplatform.schedule.ScheduleReply\x12T\n\x06\x43\x61ncel\x12%.chaosplatform.schedule.CancelRequest\x1a#.chaosplatform.schedule.CancelReplyb\x06proto3')
 )
 
 
@@ -27,111 +27,111 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _SCHEDULE = _descriptor.Descriptor(
   name='Schedule',
-  full_name='chaoshub.schedule.Schedule',
+  full_name='chaosplatform.schedule.Schedule',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='schedule_id', full_name='chaoshub.schedule.Schedule.schedule_id', index=0,
+      name='schedule_id', full_name='chaosplatform.schedule.Schedule.schedule_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_id', full_name='chaoshub.schedule.Schedule.user_id', index=1,
+      name='user_id', full_name='chaosplatform.schedule.Schedule.user_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='org_id', full_name='chaoshub.schedule.Schedule.org_id', index=2,
+      name='org_id', full_name='chaosplatform.schedule.Schedule.org_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='workspace_id', full_name='chaoshub.schedule.Schedule.workspace_id', index=3,
+      name='workspace_id', full_name='chaosplatform.schedule.Schedule.workspace_id', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='experiment_id', full_name='chaoshub.schedule.Schedule.experiment_id', index=4,
+      name='experiment_id', full_name='chaosplatform.schedule.Schedule.experiment_id', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='token_id', full_name='chaoshub.schedule.Schedule.token_id', index=5,
+      name='token_id', full_name='chaosplatform.schedule.Schedule.token_id', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='token', full_name='chaoshub.schedule.Schedule.token', index=6,
+      name='token', full_name='chaosplatform.schedule.Schedule.token', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='scheduled', full_name='chaoshub.schedule.Schedule.scheduled', index=7,
+      name='scheduled', full_name='chaosplatform.schedule.Schedule.scheduled', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='experiment', full_name='chaoshub.schedule.Schedule.experiment', index=8,
+      name='experiment', full_name='chaosplatform.schedule.Schedule.experiment', index=8,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='interval', full_name='chaoshub.schedule.Schedule.interval', index=9,
+      name='interval', full_name='chaosplatform.schedule.Schedule.interval', index=9,
       number=10, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='repeat', full_name='chaoshub.schedule.Schedule.repeat', index=10,
+      name='repeat', full_name='chaosplatform.schedule.Schedule.repeat', index=10,
       number=11, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='cron', full_name='chaoshub.schedule.Schedule.cron', index=11,
+      name='cron', full_name='chaosplatform.schedule.Schedule.cron', index=11,
       number=12, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='settings', full_name='chaoshub.schedule.Schedule.settings', index=12,
+      name='settings', full_name='chaosplatform.schedule.Schedule.settings', index=12,
       number=13, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='configuration', full_name='chaoshub.schedule.Schedule.configuration', index=13,
+      name='configuration', full_name='chaosplatform.schedule.Schedule.configuration', index=13,
       number=14, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='secrets', full_name='chaoshub.schedule.Schedule.secrets', index=14,
+      name='secrets', full_name='chaosplatform.schedule.Schedule.secrets', index=14,
       number=15, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -149,20 +149,20 @@ _SCHEDULE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=49,
-  serialized_end=336,
+  serialized_start=54,
+  serialized_end=341,
 )
 
 
 _SCHEDULEREQUEST = _descriptor.Descriptor(
   name='ScheduleRequest',
-  full_name='chaoshub.schedule.ScheduleRequest',
+  full_name='chaosplatform.schedule.ScheduleRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='schedule', full_name='chaoshub.schedule.ScheduleRequest.schedule', index=0,
+      name='schedule', full_name='chaosplatform.schedule.ScheduleRequest.schedule', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -180,20 +180,20 @@ _SCHEDULEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=338,
-  serialized_end=402,
+  serialized_start=343,
+  serialized_end=412,
 )
 
 
 _SCHEDULEREPLY = _descriptor.Descriptor(
   name='ScheduleReply',
-  full_name='chaoshub.schedule.ScheduleReply',
+  full_name='chaosplatform.schedule.ScheduleReply',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='job_id', full_name='chaoshub.schedule.ScheduleReply.job_id', index=0,
+      name='job_id', full_name='chaosplatform.schedule.ScheduleReply.job_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -211,20 +211,20 @@ _SCHEDULEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=404,
-  serialized_end=435,
+  serialized_start=414,
+  serialized_end=445,
 )
 
 
 _CANCELREQUEST = _descriptor.Descriptor(
   name='CancelRequest',
-  full_name='chaoshub.schedule.CancelRequest',
+  full_name='chaosplatform.schedule.CancelRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='job_id', full_name='chaoshub.schedule.CancelRequest.job_id', index=0,
+      name='job_id', full_name='chaosplatform.schedule.CancelRequest.job_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -242,14 +242,14 @@ _CANCELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=437,
-  serialized_end=468,
+  serialized_start=447,
+  serialized_end=478,
 )
 
 
 _CANCELREPLY = _descriptor.Descriptor(
   name='CancelReply',
-  full_name='chaoshub.schedule.CancelReply',
+  full_name='chaosplatform.schedule.CancelReply',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -266,8 +266,8 @@ _CANCELREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=470,
-  serialized_end=483,
+  serialized_start=480,
+  serialized_end=493,
 )
 
 _SCHEDULEREQUEST.fields_by_name['schedule'].message_type = _SCHEDULE
@@ -281,35 +281,35 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 Schedule = _reflection.GeneratedProtocolMessageType('Schedule', (_message.Message,), dict(
   DESCRIPTOR = _SCHEDULE,
   __module__ = 'scheduler.scheduler_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.schedule.Schedule)
+  # @@protoc_insertion_point(class_scope:chaosplatform.schedule.Schedule)
   ))
 _sym_db.RegisterMessage(Schedule)
 
 ScheduleRequest = _reflection.GeneratedProtocolMessageType('ScheduleRequest', (_message.Message,), dict(
   DESCRIPTOR = _SCHEDULEREQUEST,
   __module__ = 'scheduler.scheduler_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.schedule.ScheduleRequest)
+  # @@protoc_insertion_point(class_scope:chaosplatform.schedule.ScheduleRequest)
   ))
 _sym_db.RegisterMessage(ScheduleRequest)
 
 ScheduleReply = _reflection.GeneratedProtocolMessageType('ScheduleReply', (_message.Message,), dict(
   DESCRIPTOR = _SCHEDULEREPLY,
   __module__ = 'scheduler.scheduler_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.schedule.ScheduleReply)
+  # @@protoc_insertion_point(class_scope:chaosplatform.schedule.ScheduleReply)
   ))
 _sym_db.RegisterMessage(ScheduleReply)
 
 CancelRequest = _reflection.GeneratedProtocolMessageType('CancelRequest', (_message.Message,), dict(
   DESCRIPTOR = _CANCELREQUEST,
   __module__ = 'scheduler.scheduler_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.schedule.CancelRequest)
+  # @@protoc_insertion_point(class_scope:chaosplatform.schedule.CancelRequest)
   ))
 _sym_db.RegisterMessage(CancelRequest)
 
 CancelReply = _reflection.GeneratedProtocolMessageType('CancelReply', (_message.Message,), dict(
   DESCRIPTOR = _CANCELREPLY,
   __module__ = 'scheduler.scheduler_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.schedule.CancelReply)
+  # @@protoc_insertion_point(class_scope:chaosplatform.schedule.CancelReply)
   ))
 _sym_db.RegisterMessage(CancelReply)
 
@@ -317,16 +317,16 @@ _sym_db.RegisterMessage(CancelReply)
 
 _SCHEDULERSERVICE = _descriptor.ServiceDescriptor(
   name='SchedulerService',
-  full_name='chaoshub.schedule.SchedulerService',
+  full_name='chaosplatform.schedule.SchedulerService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=486,
-  serialized_end=662,
+  serialized_start=496,
+  serialized_end=692,
   methods=[
   _descriptor.MethodDescriptor(
     name='Schedule',
-    full_name='chaoshub.schedule.SchedulerService.Schedule',
+    full_name='chaosplatform.schedule.SchedulerService.Schedule',
     index=0,
     containing_service=None,
     input_type=_SCHEDULEREQUEST,
@@ -335,7 +335,7 @@ _SCHEDULERSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='Cancel',
-    full_name='chaoshub.schedule.SchedulerService.Cancel',
+    full_name='chaosplatform.schedule.SchedulerService.Cancel',
     index=1,
     containing_service=None,
     input_type=_CANCELREQUEST,

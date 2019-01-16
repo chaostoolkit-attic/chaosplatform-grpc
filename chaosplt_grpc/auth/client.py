@@ -1,13 +1,15 @@
-from typing import NoReturn
+from typing import List, NoReturn
 
 import grpc
 from grpc import Channel
 
 from .auth_pb2_grpc import AuthServiceStub
 from .message import AccessToken, CreateRequest, CreateReply, \
-    DeleteRequest, DeleteReply
+    DeleteRequest, DeleteReply, GetRequest, GetReply, GetByNameRequest, \
+    GetByNameReply, GetByUserRequest, GetByUserReply
 
-__all__ = ["create_access_token", "save_access_token", "remove_access_token"]
+__all__ = ["create_access_token", "remove_access_token", "get_access_token",
+           "get_access_token_by_name", "get_access_tokens_by_user"]
 
 
 def create_access_token(channel: Channel, user_id: str,
@@ -21,22 +23,37 @@ def create_access_token(channel: Channel, user_id: str,
     return response.token
 
 
-def save_access_token(channel: Channel, name: str, user_id: str,
-                      access_token: str, refresh_token: str) -> str:
-    """
-    Store the access token and return its identifier
-    """
-    stub = AuthServiceStub(channel)
-    data = CreateRequest(
-        name=name, user_id=user_id, access_token=access_token,
-        refresh_token=refresh_token)
-    response = stub.Save(data)
-    return response.id
-
-
-def remove_access_token(channel: Channel, token_id: str) -> NoReturn:
+def remove_access_token(channel: Channel, user_id: str,
+                        token_id: str) -> NoReturn:
     """
     Remove the token from the storage.
     """
     stub = AuthServiceStub(channel)
-    stub.Remove(DeleteRequest(id=token_id))
+    stub.Remove(DeleteRequest(id=token_id, user_id=user_id))
+
+
+def get_access_token_by_name(channel, user_id: str, name: str) -> AccessToken:
+    """
+    Get the token by name for a given user
+    """
+    stub = AuthServiceStub(channel)
+    response = stub.GetByName(name=name, user_id=user_id)
+    return response.token
+
+
+def get_access_tokens_by_user(channel, user_id: str) -> List[AccessToken]:
+    """
+    Get all tokens of a given user
+    """
+    stub = AuthServiceStub(channel)
+    response = stub.GetByUser(user_id=user_id)
+    return response.tokens
+
+
+def get_access_token(channel, token_id: str) -> AccessToken:
+    """
+    Get an access token
+    """
+    stub = AuthServiceStub(channel)
+    response = stub.Get(token_id=token_id)
+    return response.token
