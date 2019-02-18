@@ -7,7 +7,8 @@ from .auth_pb2_grpc import add_AuthServiceServicer_to_server, \
     AuthServiceServicer
 from .message import AccessToken, CreateRequest, CreateReply, \
     DeleteRequest, DeleteReply, GetRequest, GetReply, GetByNameRequest, \
-    GetByNameReply, GetByUserRequest, GetByUserReply
+    GetByNameReply, GetByUserRequest, GetByUserReply, RevokeRequest, \
+    RevokeReply, GetByJtiRequest, GetByJtiReply
 
 __all__ = ["AuthService", "register_auth_service"]
 
@@ -21,6 +22,10 @@ class AuthService(AuthServiceServicer):
         self.delete_access_token(request.user_id, request.id)
         return DeleteReply()
 
+    def Revoke(self, request: RevokeRequest, context) -> DeleteReply:
+        self.revoke_access_token(request.user_id, request.id)
+        return RevokeReply()
+
     def GetByUser(self, request: GetRequest, context) -> GetReply:
         token = self.get(request.id)
         return GetReply(token=token)
@@ -33,16 +38,26 @@ class AuthService(AuthServiceServicer):
         tokens = self.get_by_user(request.user_id)
         return GetByUserReply(tokens=tokens)
 
+    def GetByJti(self, request: GetByJtiRequest, context) -> GetByJtiReply:
+        tokens = self.get_by_jti(request.user_id, request.jti)
+        return GetByJtiReply(tokens=tokens)
+
     def create_access_token(self, user_id: str, name: str) -> AccessToken:
         raise NotImplementedError()
 
     def delete_access_token(self, user_id: str, token_id: str) -> NoReturn:
         raise NotImplementedError()
 
+    def revoke_access_token(self, user_id: str, token_id: str) -> NoReturn:
+        raise NotImplementedError()
+
     def get_by_name(self, user_id: str, name: str) -> AccessToken:
         raise NotImplementedError()
 
     def get_by_user(self, user_id: str) -> List[AccessToken]:
+        raise NotImplementedError()
+
+    def get_by_jti(self, user_id: str, jti: str) -> AccessToken:
         raise NotImplementedError()
 
     def get(self, token_id: str) -> AccessToken:

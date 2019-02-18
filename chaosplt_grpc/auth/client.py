@@ -6,10 +6,12 @@ from grpc import Channel
 from .auth_pb2_grpc import AuthServiceStub
 from .message import AccessToken, CreateRequest, CreateReply, \
     DeleteRequest, DeleteReply, GetRequest, GetReply, GetByNameRequest, \
-    GetByNameReply, GetByUserRequest, GetByUserReply
+    GetByNameReply, GetByUserRequest, GetByUserReply, RevokeRequest, \
+    RevokeReply, GetByJtiRequest, GetByJtiReply
 
 __all__ = ["create_access_token", "remove_access_token", "get_access_token",
-           "get_access_token_by_name", "get_access_tokens_by_user"]
+           "get_access_token_by_name", "get_access_tokens_by_user",
+           "revoke_access_token", "get_access_token_by_jti"]
 
 
 def create_access_token(channel: Channel, user_id: str,
@@ -30,6 +32,15 @@ def remove_access_token(channel: Channel, user_id: str,
     """
     stub = AuthServiceStub(channel)
     stub.Remove(DeleteRequest(id=token_id, user_id=user_id))
+
+
+def revoke_access_token(channel: Channel, user_id: str,
+                        token_id: str) -> NoReturn:
+    """
+    Revoke the token.
+    """
+    stub = AuthServiceStub(channel)
+    stub.Remove(RevokeRequest(id=token_id, user_id=user_id))
 
 
 def get_access_token_by_name(channel, user_id: str, name: str) -> AccessToken:
@@ -57,3 +68,13 @@ def get_access_token(channel, token_id: str) -> AccessToken:
     stub = AuthServiceStub(channel)
     response = stub.Get(token_id=token_id)
     return response.token
+
+
+def get_access_token_by_jti(channel, user_id: str, jti: str) -> AccessToken:
+    """
+    Get a token by its jti
+    """
+    stub = AuthServiceStub(channel)
+    response = stub.GetByJti(user_id=user_id, jti=jti)
+    return response.token
+
