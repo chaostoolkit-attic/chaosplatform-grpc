@@ -12,6 +12,8 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,30 +21,38 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='chaosplatform.workspace',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x19workspace/workspace.proto\x12\x17\x63haosplatform.workspace\" \n\x04User\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"%\n\tWorkspace\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x1d\n\rCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"D\n\x0b\x43reateReply\x12\x35\n\tworkspace\x18\x02 \x01(\x0b\x32\".chaosplatform.workspace.Workspace\"F\n\rDeleteRequest\x12\x35\n\tworkspace\x18\x01 \x01(\x0b\x32\".chaosplatform.workspace.Workspace\"\r\n\x0b\x44\x65leteReply\"#\n\x10GetByUserRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\"H\n\x0eGetByUserReply\x12\x36\n\nworkspaces\x18\x01 \x03(\x0b\x32\".chaosplatform.workspace.Workspace2\xa0\x02\n\x10WorkspaceService\x12V\n\x06\x43reate\x12&.chaosplatform.workspace.CreateRequest\x1a$.chaosplatform.workspace.CreateReply\x12V\n\x06\x44\x65lete\x12&.chaosplatform.workspace.DeleteRequest\x1a$.chaosplatform.workspace.DeleteReply\x12\\\n\x06\x42yUser\x12).chaosplatform.workspace.GetByUserRequest\x1a\'.chaosplatform.workspace.GetByUserReplyb\x06proto3')
-)
+  serialized_pb=_b('\n\x19workspace/workspace.proto\x12\x17\x63haosplatform.workspace\x1a\x19google/protobuf/any.proto\x1a\x1fgoogle/protobuf/timestamp.proto\";\n\x0c\x43ollaborator\x12\n\n\x02id\x18\x01 \x01(\t\x12\x10\n\x08username\x18\x02 \x01(\t\x12\r\n\x05owner\x18\x03 \x01(\x08\"\xeb\x01\n\tWorkspace\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06org_id\x18\x03 \x01(\t\x12\x10\n\x08org_name\x18\x04 \x01(\t\x12\x0c\n\x04kind\x18\x05 \x01(\t\x12.\n\ncreated_on\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12<\n\rcollaborators\x18\x08 \x03(\x0b\x32%.chaosplatform.workspace.Collaborator\x12&\n\x08settings\x18\t \x01(\x0b\x32\x14.google.protobuf.Any\">\n\rCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0e\n\x06org_id\x18\x03 \x01(\t\"D\n\x0b\x43reateReply\x12\x35\n\tworkspace\x18\x02 \x01(\x0b\x32\".chaosplatform.workspace.Workspace\"\x1b\n\rDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\t\"\r\n\x0b\x44\x65leteReply\"\x18\n\nGetRequest\x12\n\n\x02id\x18\x01 \x01(\t\"A\n\x08GetReply\x12\x35\n\tworkspace\x18\x01 \x01(\x0b\x32\".chaosplatform.workspace.Workspace\"\x1d\n\x0eGetManyRequest\x12\x0b\n\x03ids\x18\x01 \x03(\t\"F\n\x0cGetManyReply\x12\x36\n\nworkspaces\x18\x01 \x03(\x0b\x32\".chaosplatform.workspace.Workspace\"#\n\x10GetByUserRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\"H\n\x0eGetByUserReply\x12\x36\n\nworkspaces\x18\x01 \x03(\x0b\x32\".chaosplatform.workspace.Workspace2\xca\x03\n\x10WorkspaceService\x12V\n\x06\x43reate\x12&.chaosplatform.workspace.CreateRequest\x1a$.chaosplatform.workspace.CreateReply\x12M\n\x03Get\x12#.chaosplatform.workspace.GetRequest\x1a!.chaosplatform.workspace.GetReply\x12Y\n\x07GetMany\x12\'.chaosplatform.workspace.GetManyRequest\x1a%.chaosplatform.workspace.GetManyReply\x12V\n\x06\x44\x65lete\x12&.chaosplatform.workspace.DeleteRequest\x1a$.chaosplatform.workspace.DeleteReply\x12\\\n\x06\x42yUser\x12).chaosplatform.workspace.GetByUserRequest\x1a\'.chaosplatform.workspace.GetByUserReplyb\x06proto3')
+  ,
+  dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
 
 
 
-_USER = _descriptor.Descriptor(
-  name='User',
-  full_name='chaosplatform.workspace.User',
+_COLLABORATOR = _descriptor.Descriptor(
+  name='Collaborator',
+  full_name='chaosplatform.workspace.Collaborator',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='chaosplatform.workspace.User.id', index=0,
+      name='id', full_name='chaosplatform.workspace.Collaborator.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='chaosplatform.workspace.User.name', index=1,
+      name='username', full_name='chaosplatform.workspace.Collaborator.username', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='owner', full_name='chaosplatform.workspace.Collaborator.owner', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -58,8 +68,8 @@ _USER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54,
-  serialized_end=86,
+  serialized_start=114,
+  serialized_end=173,
 )
 
 
@@ -84,6 +94,48 @@ _WORKSPACE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='org_id', full_name='chaosplatform.workspace.Workspace.org_id', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='org_name', full_name='chaosplatform.workspace.Workspace.org_name', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='kind', full_name='chaosplatform.workspace.Workspace.kind', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='created_on', full_name='chaosplatform.workspace.Workspace.created_on', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='collaborators', full_name='chaosplatform.workspace.Workspace.collaborators', index=6,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='settings', full_name='chaosplatform.workspace.Workspace.settings', index=7,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -96,8 +148,8 @@ _WORKSPACE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=88,
-  serialized_end=125,
+  serialized_start=176,
+  serialized_end=411,
 )
 
 
@@ -115,6 +167,20 @@ _CREATEREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='user_id', full_name='chaosplatform.workspace.CreateRequest.user_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='org_id', full_name='chaosplatform.workspace.CreateRequest.org_id', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -127,8 +193,8 @@ _CREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=127,
-  serialized_end=156,
+  serialized_start=413,
+  serialized_end=475,
 )
 
 
@@ -158,8 +224,8 @@ _CREATEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=158,
-  serialized_end=226,
+  serialized_start=477,
+  serialized_end=545,
 )
 
 
@@ -171,9 +237,9 @@ _DELETEREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='workspace', full_name='chaosplatform.workspace.DeleteRequest.workspace', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='id', full_name='chaosplatform.workspace.DeleteRequest.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -189,8 +255,8 @@ _DELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=228,
-  serialized_end=298,
+  serialized_start=547,
+  serialized_end=574,
 )
 
 
@@ -213,8 +279,132 @@ _DELETEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=300,
-  serialized_end=313,
+  serialized_start=576,
+  serialized_end=589,
+)
+
+
+_GETREQUEST = _descriptor.Descriptor(
+  name='GetRequest',
+  full_name='chaosplatform.workspace.GetRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='chaosplatform.workspace.GetRequest.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=591,
+  serialized_end=615,
+)
+
+
+_GETREPLY = _descriptor.Descriptor(
+  name='GetReply',
+  full_name='chaosplatform.workspace.GetReply',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='workspace', full_name='chaosplatform.workspace.GetReply.workspace', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=617,
+  serialized_end=682,
+)
+
+
+_GETMANYREQUEST = _descriptor.Descriptor(
+  name='GetManyRequest',
+  full_name='chaosplatform.workspace.GetManyRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ids', full_name='chaosplatform.workspace.GetManyRequest.ids', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=684,
+  serialized_end=713,
+)
+
+
+_GETMANYREPLY = _descriptor.Descriptor(
+  name='GetManyReply',
+  full_name='chaosplatform.workspace.GetManyReply',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='workspaces', full_name='chaosplatform.workspace.GetManyReply.workspaces', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=715,
+  serialized_end=785,
 )
 
 
@@ -244,8 +434,8 @@ _GETBYUSERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=315,
-  serialized_end=350,
+  serialized_start=787,
+  serialized_end=822,
 )
 
 
@@ -275,29 +465,37 @@ _GETBYUSERREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=352,
-  serialized_end=424,
+  serialized_start=824,
+  serialized_end=896,
 )
 
+_WORKSPACE.fields_by_name['created_on'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_WORKSPACE.fields_by_name['collaborators'].message_type = _COLLABORATOR
+_WORKSPACE.fields_by_name['settings'].message_type = google_dot_protobuf_dot_any__pb2._ANY
 _CREATEREPLY.fields_by_name['workspace'].message_type = _WORKSPACE
-_DELETEREQUEST.fields_by_name['workspace'].message_type = _WORKSPACE
+_GETREPLY.fields_by_name['workspace'].message_type = _WORKSPACE
+_GETMANYREPLY.fields_by_name['workspaces'].message_type = _WORKSPACE
 _GETBYUSERREPLY.fields_by_name['workspaces'].message_type = _WORKSPACE
-DESCRIPTOR.message_types_by_name['User'] = _USER
+DESCRIPTOR.message_types_by_name['Collaborator'] = _COLLABORATOR
 DESCRIPTOR.message_types_by_name['Workspace'] = _WORKSPACE
 DESCRIPTOR.message_types_by_name['CreateRequest'] = _CREATEREQUEST
 DESCRIPTOR.message_types_by_name['CreateReply'] = _CREATEREPLY
 DESCRIPTOR.message_types_by_name['DeleteRequest'] = _DELETEREQUEST
 DESCRIPTOR.message_types_by_name['DeleteReply'] = _DELETEREPLY
+DESCRIPTOR.message_types_by_name['GetRequest'] = _GETREQUEST
+DESCRIPTOR.message_types_by_name['GetReply'] = _GETREPLY
+DESCRIPTOR.message_types_by_name['GetManyRequest'] = _GETMANYREQUEST
+DESCRIPTOR.message_types_by_name['GetManyReply'] = _GETMANYREPLY
 DESCRIPTOR.message_types_by_name['GetByUserRequest'] = _GETBYUSERREQUEST
 DESCRIPTOR.message_types_by_name['GetByUserReply'] = _GETBYUSERREPLY
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), dict(
-  DESCRIPTOR = _USER,
+Collaborator = _reflection.GeneratedProtocolMessageType('Collaborator', (_message.Message,), dict(
+  DESCRIPTOR = _COLLABORATOR,
   __module__ = 'workspace.workspace_pb2'
-  # @@protoc_insertion_point(class_scope:chaosplatform.workspace.User)
+  # @@protoc_insertion_point(class_scope:chaosplatform.workspace.Collaborator)
   ))
-_sym_db.RegisterMessage(User)
+_sym_db.RegisterMessage(Collaborator)
 
 Workspace = _reflection.GeneratedProtocolMessageType('Workspace', (_message.Message,), dict(
   DESCRIPTOR = _WORKSPACE,
@@ -334,6 +532,34 @@ DeleteReply = _reflection.GeneratedProtocolMessageType('DeleteReply', (_message.
   ))
 _sym_db.RegisterMessage(DeleteReply)
 
+GetRequest = _reflection.GeneratedProtocolMessageType('GetRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETREQUEST,
+  __module__ = 'workspace.workspace_pb2'
+  # @@protoc_insertion_point(class_scope:chaosplatform.workspace.GetRequest)
+  ))
+_sym_db.RegisterMessage(GetRequest)
+
+GetReply = _reflection.GeneratedProtocolMessageType('GetReply', (_message.Message,), dict(
+  DESCRIPTOR = _GETREPLY,
+  __module__ = 'workspace.workspace_pb2'
+  # @@protoc_insertion_point(class_scope:chaosplatform.workspace.GetReply)
+  ))
+_sym_db.RegisterMessage(GetReply)
+
+GetManyRequest = _reflection.GeneratedProtocolMessageType('GetManyRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETMANYREQUEST,
+  __module__ = 'workspace.workspace_pb2'
+  # @@protoc_insertion_point(class_scope:chaosplatform.workspace.GetManyRequest)
+  ))
+_sym_db.RegisterMessage(GetManyRequest)
+
+GetManyReply = _reflection.GeneratedProtocolMessageType('GetManyReply', (_message.Message,), dict(
+  DESCRIPTOR = _GETMANYREPLY,
+  __module__ = 'workspace.workspace_pb2'
+  # @@protoc_insertion_point(class_scope:chaosplatform.workspace.GetManyReply)
+  ))
+_sym_db.RegisterMessage(GetManyReply)
+
 GetByUserRequest = _reflection.GeneratedProtocolMessageType('GetByUserRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETBYUSERREQUEST,
   __module__ = 'workspace.workspace_pb2'
@@ -356,8 +582,8 @@ _WORKSPACESERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=427,
-  serialized_end=715,
+  serialized_start=899,
+  serialized_end=1357,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',
@@ -369,9 +595,27 @@ _WORKSPACESERVICE = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
+    name='Get',
+    full_name='chaosplatform.workspace.WorkspaceService.Get',
+    index=1,
+    containing_service=None,
+    input_type=_GETREQUEST,
+    output_type=_GETREPLY,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetMany',
+    full_name='chaosplatform.workspace.WorkspaceService.GetMany',
+    index=2,
+    containing_service=None,
+    input_type=_GETMANYREQUEST,
+    output_type=_GETMANYREPLY,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
     name='Delete',
     full_name='chaosplatform.workspace.WorkspaceService.Delete',
-    index=1,
+    index=3,
     containing_service=None,
     input_type=_DELETEREQUEST,
     output_type=_DELETEREPLY,
@@ -380,7 +624,7 @@ _WORKSPACESERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='ByUser',
     full_name='chaosplatform.workspace.WorkspaceService.ByUser',
-    index=2,
+    index=4,
     containing_service=None,
     input_type=_GETBYUSERREQUEST,
     output_type=_GETBYUSERREPLY,

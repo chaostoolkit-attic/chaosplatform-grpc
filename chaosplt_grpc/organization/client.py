@@ -5,10 +5,10 @@ from grpc import Channel
 
 from .organization_pb2_grpc import OrganizationServiceStub
 from .message import CreateRequest, GetByUserRequest, Organization, \
-    DeleteRequest
+    DeleteRequest, GetRequest, GetManyRequest
 
-__all__ = ["create_organization", "delete_organization",
-           "get_organizations_for_user"]
+__all__ = ["create_organization", "delete_organization", "get_organization",
+           "get_organizations_for_user", "get_organizations"]
 
 
 def create_organization(channel: Channel, name: str,
@@ -37,3 +37,22 @@ def get_organizations_for_user(channel: Channel,
     stub = OrganizationServiceStub(channel)
     response = stub.ByUser(GetByUserRequest(user_id=user_id))
     return response.organizations
+
+
+def get_organization(channel: Channel, org_id: str) -> List[Organization]:
+    """
+    Get an organization
+    """
+    stub = OrganizationServiceStub(channel)
+    response = stub.Get(GetRequest(id=org_id))
+    return response.workspace
+
+
+def get_organizations(channel: Channel,
+                      org_ids: List[str]) -> List[Organization]:
+    """
+    Get many organizations
+    """
+    stub = OrganizationServiceStub(channel)
+    response = stub.GetMany(GetManyRequest(ids=org_ids))
+    return response.workspaces

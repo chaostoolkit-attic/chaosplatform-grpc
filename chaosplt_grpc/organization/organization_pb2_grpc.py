@@ -19,6 +19,16 @@ class OrganizationServiceStub(object):
         request_serializer=organization_dot_organization__pb2.CreateRequest.SerializeToString,
         response_deserializer=organization_dot_organization__pb2.CreateReply.FromString,
         )
+    self.Get = channel.unary_unary(
+        '/chaosplatform.organization.OrganizationService/Get',
+        request_serializer=organization_dot_organization__pb2.GetRequest.SerializeToString,
+        response_deserializer=organization_dot_organization__pb2.GetReply.FromString,
+        )
+    self.GetMany = channel.unary_unary(
+        '/chaosplatform.organization.OrganizationService/GetMany',
+        request_serializer=organization_dot_organization__pb2.GetManyRequest.SerializeToString,
+        response_deserializer=organization_dot_organization__pb2.GetManyReply.FromString,
+        )
     self.Delete = channel.unary_unary(
         '/chaosplatform.organization.OrganizationService/Delete',
         request_serializer=organization_dot_organization__pb2.DeleteRequest.SerializeToString,
@@ -36,6 +46,20 @@ class OrganizationServiceServicer(object):
   pass
 
   def Create(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def Get(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetMany(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -63,6 +87,16 @@ def add_OrganizationServiceServicer_to_server(servicer, server):
           servicer.Create,
           request_deserializer=organization_dot_organization__pb2.CreateRequest.FromString,
           response_serializer=organization_dot_organization__pb2.CreateReply.SerializeToString,
+      ),
+      'Get': grpc.unary_unary_rpc_method_handler(
+          servicer.Get,
+          request_deserializer=organization_dot_organization__pb2.GetRequest.FromString,
+          response_serializer=organization_dot_organization__pb2.GetReply.SerializeToString,
+      ),
+      'GetMany': grpc.unary_unary_rpc_method_handler(
+          servicer.GetMany,
+          request_deserializer=organization_dot_organization__pb2.GetManyRequest.FromString,
+          response_serializer=organization_dot_organization__pb2.GetManyReply.SerializeToString,
       ),
       'Delete': grpc.unary_unary_rpc_method_handler(
           servicer.Delete,

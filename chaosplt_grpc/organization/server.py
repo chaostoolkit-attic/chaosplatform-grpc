@@ -1,12 +1,12 @@
 from typing import List, NoReturn
 
-import grpc
-from grpc import Channel, Server
+from grpc import Server
 
 from .organization_pb2_grpc import add_OrganizationServiceServicer_to_server, \
     OrganizationServiceServicer
 from .message import CreateRequest, CreateReply, DeleteRequest, DeleteReply, \
-    GetByUserRequest, GetByUserReply, Organization
+    GetByUserRequest, GetByUserReply, Organization, GetRequest, GetReply, \
+    GetManyRequest, GetManyReply
 
 __all__ = ["OrganizationService", "register_organization_service"]
 
@@ -21,8 +21,16 @@ class OrganizationService(OrganizationServiceServicer):
         return DeleteReply()
 
     def ByUser(self, request: GetByUserRequest, context) -> GetByUserReply:
-        orgs = self.get_organization_for_user(request.user_id)
+        orgs = self.get_organizations_for_user(request.user_id)
         return GetByUserReply(organizations=orgs)
+
+    def Get(self, request: GetRequest, context) -> GetReply:
+        org = self.get_organization(request.id)
+        return GetReply(org=org)
+
+    def GetMany(self, request: GetManyRequest, context) -> GetManyReply:
+        orgs = self.get_organizations(request.ids)
+        return GetManyReply(orgs=orgs)
 
     def delete_organization(self, user_id: str, name: str) -> NoReturn:
         raise NotImplementedError()
@@ -31,6 +39,12 @@ class OrganizationService(OrganizationServiceServicer):
         raise NotImplementedError()
 
     def get_organization_for_user(self, user_id: str) -> List[Organization]:
+        raise NotImplementedError()
+
+    def get_organization(self, org_id: str) -> Organization:
+        raise NotImplementedError()
+
+    def get_organizations(self, org_ids: List[str]) -> List[Organization]:
         raise NotImplementedError()
 
 
