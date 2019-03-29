@@ -8,7 +8,8 @@ from .auth_pb2_grpc import add_AuthServiceServicer_to_server, \
 from .message import AccessToken, CreateRequest, CreateReply, \
     DeleteRequest, DeleteReply, GetRequest, GetReply, GetByNameRequest, \
     GetByNameReply, GetByUserRequest, GetByUserReply, RevokeRequest, \
-    RevokeReply, GetByJtiRequest, GetByJtiReply
+    RevokeReply, GetByJtiRequest, GetByJtiReply, GetByWorkspaceRequest, \
+    GetByOrgRequest, GetByWorkspaceReply, GetByOrgReply
 
 __all__ = ["AuthService", "register_auth_service"]
 
@@ -34,13 +35,18 @@ class AuthService(AuthServiceServicer):
         token = self.get_by_name(request.user_id, request.name)
         return GetByNameReply(token=token)
 
-    def GetByUser(self, request: GetByUserRequest, context) -> GetByUserReply:
-        tokens = self.get_by_user(request.user_id)
-        return GetByUserReply(tokens=tokens)
-
     def GetByJti(self, request: GetByJtiRequest, context) -> GetByJtiReply:
         tokens = self.get_by_jti(request.user_id, request.jti)
         return GetByJtiReply(tokens=tokens)
+
+    def GetByOrg(self, request: GetByOrgRequest, context) -> GetByOrgReply:
+        tokens = self.get_by_org(request.org_id)
+        return GetByOrgReply(tokens=tokens)
+
+    def GetByWorkspace(self, request: GetByOrgRequest,
+                       context) -> GetByWorkspaceReply:
+        tokens = self.get_by_workspace(request.workspace_id)
+        return GetByWorkspaceReply(tokens=tokens)
 
     def create_access_token(self, user_id: str, name: str) -> AccessToken:
         raise NotImplementedError()
@@ -61,6 +67,12 @@ class AuthService(AuthServiceServicer):
         raise NotImplementedError()
 
     def get(self, token_id: str) -> AccessToken:
+        raise NotImplementedError()
+
+    def get_by_org(self, org_id: str) -> List[AccessToken]:
+        raise NotImplementedError()
+
+    def get_by_workspace(self, workspace_id: str) -> List[AccessToken]:
         raise NotImplementedError()
 
 

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='chaosplatform.auth',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0f\x61uth/auth.proto\x12\x12\x63haosplatform.auth\"\x9f\x01\n\x0b\x41\x63\x63\x65ssToken\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x04 \x01(\t\x12\x15\n\rrefresh_token\x18\x05 \x01(\t\x12\x0f\n\x07revoked\x18\x06 \x01(\x08\x12\x11\n\tissued_on\x18\x07 \x01(\t\x12\x14\n\x0clast_used_on\x18\x08 \x01(\t\".\n\rCreateRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"=\n\x0b\x43reateReply\x12.\n\x05token\x18\x01 \x01(\x0b\x32\x1f.chaosplatform.auth.AccessToken\",\n\rDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\"\r\n\x0b\x44\x65leteReply\",\n\rRevokeRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\"\r\n\x0bRevokeReply\"\x18\n\nGetRequest\x12\n\n\x02id\x18\x01 \x01(\t\":\n\x08GetReply\x12.\n\x05token\x18\x01 \x01(\x0b\x32\x1f.chaosplatform.auth.AccessToken\"#\n\x10GetByUserRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\"A\n\x0eGetByUserReply\x12/\n\x06tokens\x18\x01 \x03(\x0b\x32\x1f.chaosplatform.auth.AccessToken\"1\n\x10GetByNameRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"@\n\x0eGetByNameReply\x12.\n\x05token\x18\x01 \x01(\x0b\x32\x1f.chaosplatform.auth.AccessToken\"/\n\x0fGetByJtiRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0b\n\x03jti\x18\x02 \x01(\t\"?\n\rGetByJtiReply\x12.\n\x05token\x18\x01 \x01(\x0b\x32\x1f.chaosplatform.auth.AccessToken2\xbe\x04\n\x0b\x41uthService\x12L\n\x06\x43reate\x12!.chaosplatform.auth.CreateRequest\x1a\x1f.chaosplatform.auth.CreateReply\x12L\n\x06\x44\x65lete\x12!.chaosplatform.auth.DeleteRequest\x1a\x1f.chaosplatform.auth.DeleteReply\x12L\n\x06Revoke\x12!.chaosplatform.auth.RevokeRequest\x1a\x1f.chaosplatform.auth.RevokeReply\x12\x43\n\x03Get\x12\x1e.chaosplatform.auth.GetRequest\x1a\x1c.chaosplatform.auth.GetReply\x12U\n\tGetByName\x12$.chaosplatform.auth.GetByNameRequest\x1a\".chaosplatform.auth.GetByNameReply\x12U\n\tGetByUser\x12$.chaosplatform.auth.GetByUserRequest\x1a\".chaosplatform.auth.GetByUserReply\x12R\n\x08GetByJti\x12#.chaosplatform.auth.GetByJtiRequest\x1a!.chaosplatform.auth.GetByJtiReplyb\x06proto3')
+  serialized_pb=_b('\n\x0f\x61uth/auth.proto\x12\x12\x63haosplatform.auth\"\xda\x01\n\x0b\x41\x63\x63\x65ssToken\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0e\n\x06org_id\x18\x03 \x01(\t\x12\x14\n\x0cworkspace_id\x18\x04 \x01(\t\x12\x13\n\x0bis_personal\x18\x05 \x01(\x08\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x07 \x01(\t\x12\x15\n\rrefresh_token\x18\x08 \x01(\t\x12\x0f\n\x07revoked\x18\t \x01(\x08\x12\x11\n\tissued_on\x18\n \x01(\t\x12\x14\n\x0clast_used_on\x18\x0b \x01(\t\".\n\rCreateRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"=\n\x0b\x43reateReply\x12.\n\x05token\x18\x01 \x01(\x0b\x32\x1f.chaosplatform.auth.AccessToken\",\n\rDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\"\r\n\x0b\x44\x65leteReply\",\n\rRevokeRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\"\r\n\x0bRevokeReply\"\x18\n\nGetRequest\x12\n\n\x02id\x18\x01 \x01(\t\":\n\x08GetReply\x12.\n\x05token\x18\x01 \x01(\x0b\x32\x1f.chaosplatform.auth.AccessToken\"#\n\x10GetByUserRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\"A\n\x0eGetByUserReply\x12/\n\x06tokens\x18\x01 \x03(\x0b\x32\x1f.chaosplatform.auth.AccessToken\"!\n\x0fGetByOrgRequest\x12\x0e\n\x06org_id\x18\x01 \x01(\t\"@\n\rGetByOrgReply\x12/\n\x06tokens\x18\x01 \x03(\x0b\x32\x1f.chaosplatform.auth.AccessToken\"-\n\x15GetByWorkspaceRequest\x12\x14\n\x0cworkspace_id\x18\x01 \x01(\t\"F\n\x13GetByWorkspaceReply\x12/\n\x06tokens\x18\x01 \x03(\x0b\x32\x1f.chaosplatform.auth.AccessToken\"1\n\x10GetByNameRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"@\n\x0eGetByNameReply\x12.\n\x05token\x18\x01 \x01(\x0b\x32\x1f.chaosplatform.auth.AccessToken\"/\n\x0fGetByJtiRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0b\n\x03jti\x18\x02 \x01(\t\"?\n\rGetByJtiReply\x12.\n\x05token\x18\x01 \x01(\x0b\x32\x1f.chaosplatform.auth.AccessToken2\xf8\x05\n\x0b\x41uthService\x12L\n\x06\x43reate\x12!.chaosplatform.auth.CreateRequest\x1a\x1f.chaosplatform.auth.CreateReply\x12L\n\x06\x44\x65lete\x12!.chaosplatform.auth.DeleteRequest\x1a\x1f.chaosplatform.auth.DeleteReply\x12L\n\x06Revoke\x12!.chaosplatform.auth.RevokeRequest\x1a\x1f.chaosplatform.auth.RevokeReply\x12\x43\n\x03Get\x12\x1e.chaosplatform.auth.GetRequest\x1a\x1c.chaosplatform.auth.GetReply\x12U\n\tGetByName\x12$.chaosplatform.auth.GetByNameRequest\x1a\".chaosplatform.auth.GetByNameReply\x12U\n\tGetByUser\x12$.chaosplatform.auth.GetByUserRequest\x1a\".chaosplatform.auth.GetByUserReply\x12R\n\x08GetByOrg\x12#.chaosplatform.auth.GetByOrgRequest\x1a!.chaosplatform.auth.GetByOrgReply\x12\x64\n\x0eGetByWorkspace\x12).chaosplatform.auth.GetByWorkspaceRequest\x1a\'.chaosplatform.auth.GetByWorkspaceReply\x12R\n\x08GetByJti\x12#.chaosplatform.auth.GetByJtiRequest\x1a!.chaosplatform.auth.GetByJtiReplyb\x06proto3')
 )
 
 
@@ -47,43 +47,64 @@ _ACCESSTOKEN = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='chaosplatform.auth.AccessToken.name', index=2,
+      name='org_id', full_name='chaosplatform.auth.AccessToken.org_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='access_token', full_name='chaosplatform.auth.AccessToken.access_token', index=3,
+      name='workspace_id', full_name='chaosplatform.auth.AccessToken.workspace_id', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='refresh_token', full_name='chaosplatform.auth.AccessToken.refresh_token', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='revoked', full_name='chaosplatform.auth.AccessToken.revoked', index=5,
-      number=6, type=8, cpp_type=7, label=1,
+      name='is_personal', full_name='chaosplatform.auth.AccessToken.is_personal', index=4,
+      number=5, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='issued_on', full_name='chaosplatform.auth.AccessToken.issued_on', index=6,
+      name='name', full_name='chaosplatform.auth.AccessToken.name', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='access_token', full_name='chaosplatform.auth.AccessToken.access_token', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='last_used_on', full_name='chaosplatform.auth.AccessToken.last_used_on', index=7,
+      name='refresh_token', full_name='chaosplatform.auth.AccessToken.refresh_token', index=7,
       number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='revoked', full_name='chaosplatform.auth.AccessToken.revoked', index=8,
+      number=9, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='issued_on', full_name='chaosplatform.auth.AccessToken.issued_on', index=9,
+      number=10, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='last_used_on', full_name='chaosplatform.auth.AccessToken.last_used_on', index=10,
+      number=11, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -101,7 +122,7 @@ _ACCESSTOKEN = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=40,
-  serialized_end=199,
+  serialized_end=258,
 )
 
 
@@ -138,8 +159,8 @@ _CREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=201,
-  serialized_end=247,
+  serialized_start=260,
+  serialized_end=306,
 )
 
 
@@ -169,8 +190,8 @@ _CREATEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=249,
-  serialized_end=310,
+  serialized_start=308,
+  serialized_end=369,
 )
 
 
@@ -207,8 +228,8 @@ _DELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=312,
-  serialized_end=356,
+  serialized_start=371,
+  serialized_end=415,
 )
 
 
@@ -231,8 +252,8 @@ _DELETEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=358,
-  serialized_end=371,
+  serialized_start=417,
+  serialized_end=430,
 )
 
 
@@ -269,8 +290,8 @@ _REVOKEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=373,
-  serialized_end=417,
+  serialized_start=432,
+  serialized_end=476,
 )
 
 
@@ -293,8 +314,8 @@ _REVOKEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=419,
-  serialized_end=432,
+  serialized_start=478,
+  serialized_end=491,
 )
 
 
@@ -324,8 +345,8 @@ _GETREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=434,
-  serialized_end=458,
+  serialized_start=493,
+  serialized_end=517,
 )
 
 
@@ -355,8 +376,8 @@ _GETREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=460,
-  serialized_end=518,
+  serialized_start=519,
+  serialized_end=577,
 )
 
 
@@ -386,8 +407,8 @@ _GETBYUSERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=520,
-  serialized_end=555,
+  serialized_start=579,
+  serialized_end=614,
 )
 
 
@@ -417,8 +438,132 @@ _GETBYUSERREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=557,
-  serialized_end=622,
+  serialized_start=616,
+  serialized_end=681,
+)
+
+
+_GETBYORGREQUEST = _descriptor.Descriptor(
+  name='GetByOrgRequest',
+  full_name='chaosplatform.auth.GetByOrgRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='org_id', full_name='chaosplatform.auth.GetByOrgRequest.org_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=683,
+  serialized_end=716,
+)
+
+
+_GETBYORGREPLY = _descriptor.Descriptor(
+  name='GetByOrgReply',
+  full_name='chaosplatform.auth.GetByOrgReply',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='tokens', full_name='chaosplatform.auth.GetByOrgReply.tokens', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=718,
+  serialized_end=782,
+)
+
+
+_GETBYWORKSPACEREQUEST = _descriptor.Descriptor(
+  name='GetByWorkspaceRequest',
+  full_name='chaosplatform.auth.GetByWorkspaceRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='workspace_id', full_name='chaosplatform.auth.GetByWorkspaceRequest.workspace_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=784,
+  serialized_end=829,
+)
+
+
+_GETBYWORKSPACEREPLY = _descriptor.Descriptor(
+  name='GetByWorkspaceReply',
+  full_name='chaosplatform.auth.GetByWorkspaceReply',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='tokens', full_name='chaosplatform.auth.GetByWorkspaceReply.tokens', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=831,
+  serialized_end=901,
 )
 
 
@@ -455,8 +600,8 @@ _GETBYNAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=624,
-  serialized_end=673,
+  serialized_start=903,
+  serialized_end=952,
 )
 
 
@@ -486,8 +631,8 @@ _GETBYNAMEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=675,
-  serialized_end=739,
+  serialized_start=954,
+  serialized_end=1018,
 )
 
 
@@ -524,8 +669,8 @@ _GETBYJTIREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=741,
-  serialized_end=788,
+  serialized_start=1020,
+  serialized_end=1067,
 )
 
 
@@ -555,13 +700,15 @@ _GETBYJTIREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=790,
-  serialized_end=853,
+  serialized_start=1069,
+  serialized_end=1132,
 )
 
 _CREATEREPLY.fields_by_name['token'].message_type = _ACCESSTOKEN
 _GETREPLY.fields_by_name['token'].message_type = _ACCESSTOKEN
 _GETBYUSERREPLY.fields_by_name['tokens'].message_type = _ACCESSTOKEN
+_GETBYORGREPLY.fields_by_name['tokens'].message_type = _ACCESSTOKEN
+_GETBYWORKSPACEREPLY.fields_by_name['tokens'].message_type = _ACCESSTOKEN
 _GETBYNAMEREPLY.fields_by_name['token'].message_type = _ACCESSTOKEN
 _GETBYJTIREPLY.fields_by_name['token'].message_type = _ACCESSTOKEN
 DESCRIPTOR.message_types_by_name['AccessToken'] = _ACCESSTOKEN
@@ -575,6 +722,10 @@ DESCRIPTOR.message_types_by_name['GetRequest'] = _GETREQUEST
 DESCRIPTOR.message_types_by_name['GetReply'] = _GETREPLY
 DESCRIPTOR.message_types_by_name['GetByUserRequest'] = _GETBYUSERREQUEST
 DESCRIPTOR.message_types_by_name['GetByUserReply'] = _GETBYUSERREPLY
+DESCRIPTOR.message_types_by_name['GetByOrgRequest'] = _GETBYORGREQUEST
+DESCRIPTOR.message_types_by_name['GetByOrgReply'] = _GETBYORGREPLY
+DESCRIPTOR.message_types_by_name['GetByWorkspaceRequest'] = _GETBYWORKSPACEREQUEST
+DESCRIPTOR.message_types_by_name['GetByWorkspaceReply'] = _GETBYWORKSPACEREPLY
 DESCRIPTOR.message_types_by_name['GetByNameRequest'] = _GETBYNAMEREQUEST
 DESCRIPTOR.message_types_by_name['GetByNameReply'] = _GETBYNAMEREPLY
 DESCRIPTOR.message_types_by_name['GetByJtiRequest'] = _GETBYJTIREQUEST
@@ -658,6 +809,34 @@ GetByUserReply = _reflection.GeneratedProtocolMessageType('GetByUserReply', (_me
   ))
 _sym_db.RegisterMessage(GetByUserReply)
 
+GetByOrgRequest = _reflection.GeneratedProtocolMessageType('GetByOrgRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETBYORGREQUEST,
+  __module__ = 'auth.auth_pb2'
+  # @@protoc_insertion_point(class_scope:chaosplatform.auth.GetByOrgRequest)
+  ))
+_sym_db.RegisterMessage(GetByOrgRequest)
+
+GetByOrgReply = _reflection.GeneratedProtocolMessageType('GetByOrgReply', (_message.Message,), dict(
+  DESCRIPTOR = _GETBYORGREPLY,
+  __module__ = 'auth.auth_pb2'
+  # @@protoc_insertion_point(class_scope:chaosplatform.auth.GetByOrgReply)
+  ))
+_sym_db.RegisterMessage(GetByOrgReply)
+
+GetByWorkspaceRequest = _reflection.GeneratedProtocolMessageType('GetByWorkspaceRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETBYWORKSPACEREQUEST,
+  __module__ = 'auth.auth_pb2'
+  # @@protoc_insertion_point(class_scope:chaosplatform.auth.GetByWorkspaceRequest)
+  ))
+_sym_db.RegisterMessage(GetByWorkspaceRequest)
+
+GetByWorkspaceReply = _reflection.GeneratedProtocolMessageType('GetByWorkspaceReply', (_message.Message,), dict(
+  DESCRIPTOR = _GETBYWORKSPACEREPLY,
+  __module__ = 'auth.auth_pb2'
+  # @@protoc_insertion_point(class_scope:chaosplatform.auth.GetByWorkspaceReply)
+  ))
+_sym_db.RegisterMessage(GetByWorkspaceReply)
+
 GetByNameRequest = _reflection.GeneratedProtocolMessageType('GetByNameRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETBYNAMEREQUEST,
   __module__ = 'auth.auth_pb2'
@@ -694,8 +873,8 @@ _AUTHSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=856,
-  serialized_end=1430,
+  serialized_start=1135,
+  serialized_end=1895,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',
@@ -752,9 +931,27 @@ _AUTHSERVICE = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
+    name='GetByOrg',
+    full_name='chaosplatform.auth.AuthService.GetByOrg',
+    index=6,
+    containing_service=None,
+    input_type=_GETBYORGREQUEST,
+    output_type=_GETBYORGREPLY,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetByWorkspace',
+    full_name='chaosplatform.auth.AuthService.GetByWorkspace',
+    index=7,
+    containing_service=None,
+    input_type=_GETBYWORKSPACEREQUEST,
+    output_type=_GETBYWORKSPACEREPLY,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
     name='GetByJti',
     full_name='chaosplatform.auth.AuthService.GetByJti',
-    index=6,
+    index=8,
     containing_service=None,
     input_type=_GETBYJTIREQUEST,
     output_type=_GETBYJTIREPLY,

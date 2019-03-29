@@ -15,17 +15,17 @@ class RegistrationServiceStub(object):
       channel: A grpc.Channel.
     """
     self.Create = channel.unary_unary(
-        '/chaoshub.registration.RegistrationService/Create',
+        '/chaosplatform.registration.RegistrationService/Create',
         request_serializer=registration_dot_registration__pb2.CreateRequest.SerializeToString,
         response_deserializer=registration_dot_registration__pb2.CreateReply.FromString,
         )
     self.Delete = channel.unary_unary(
-        '/chaoshub.registration.RegistrationService/Delete',
+        '/chaosplatform.registration.RegistrationService/Delete',
         request_serializer=registration_dot_registration__pb2.DeleteRequest.SerializeToString,
         response_deserializer=registration_dot_registration__pb2.DeleteReply.FromString,
         )
     self.GetById = channel.unary_unary(
-        '/chaoshub.registration.RegistrationService/GetById',
+        '/chaosplatform.registration.RegistrationService/GetById',
         request_serializer=registration_dot_registration__pb2.GetByIdRequest.SerializeToString,
         response_deserializer=registration_dot_registration__pb2.GetByIdReply.FromString,
         )
@@ -76,5 +76,5 @@ def add_RegistrationServiceServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'chaoshub.registration.RegistrationService', rpc_method_handlers)
+      'chaosplatform.registration.RegistrationService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

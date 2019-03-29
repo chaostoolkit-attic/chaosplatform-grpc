@@ -7,11 +7,13 @@ from .auth_pb2_grpc import AuthServiceStub
 from .message import AccessToken, CreateRequest, CreateReply, \
     DeleteRequest, DeleteReply, GetRequest, GetReply, GetByNameRequest, \
     GetByNameReply, GetByUserRequest, GetByUserReply, RevokeRequest, \
-    RevokeReply, GetByJtiRequest, GetByJtiReply
+    RevokeReply, GetByJtiRequest, GetByJtiReply, GetByWorkspaceRequest, \
+    GetByOrgRequest
 
 __all__ = ["create_access_token", "remove_access_token", "get_access_token",
            "get_access_token_by_name", "get_access_tokens_by_user",
-           "revoke_access_token", "get_access_token_by_jti"]
+           "revoke_access_token", "get_access_token_by_jti", "get_by_org",
+           "get_by_workspace"]
 
 
 def create_access_token(channel: Channel, user_id: str,
@@ -78,3 +80,20 @@ def get_access_token_by_jti(channel, user_id: str, jti: str) -> AccessToken:
     response = stub.GetByJti(user_id=user_id, jti=jti)
     return response.token
 
+
+def get_by_org(channel, org_id: str) -> List[AccessToken]:
+    """
+    Get all tokens for an organization
+    """
+    stub = AuthServiceStub(channel)
+    response = stub.GetByOrg(org_id=org_id)
+    return response.tokens
+
+
+def get_by_workspace(channel, workspace_id: str) -> List[AccessToken]:
+    """
+    Get all tokens for an organization
+    """
+    stub = AuthServiceStub(channel)
+    response = stub.GetByWorkspace(workspace_id=workspace_id)
+    return response.tokens

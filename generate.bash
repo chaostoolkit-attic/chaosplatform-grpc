@@ -82,6 +82,15 @@ function generate () {
         -I protos \
         --python_out=chaosplt_grpc \
         --grpc_python_out=chaosplt_grpc \
+        registration/registration.proto
+    sed -i "s/from registration/from ./g" \
+        chaosplt_grpc/registration/registration_pb2_grpc.py
+    echo "Generated registration stubs"
+
+    python -m grpc_tools.protoc \
+        -I protos \
+        --python_out=chaosplt_grpc \
+        --grpc_python_out=chaosplt_grpc \
         scheduling/scheduling.proto
     sed -i "s/from scheduling/from ./g" \
         chaosplt_grpc/scheduling/scheduling_pb2_grpc.py

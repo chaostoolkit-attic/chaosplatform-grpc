@@ -44,6 +44,16 @@ class AuthServiceStub(object):
         request_serializer=auth_dot_auth__pb2.GetByUserRequest.SerializeToString,
         response_deserializer=auth_dot_auth__pb2.GetByUserReply.FromString,
         )
+    self.GetByOrg = channel.unary_unary(
+        '/chaosplatform.auth.AuthService/GetByOrg',
+        request_serializer=auth_dot_auth__pb2.GetByOrgRequest.SerializeToString,
+        response_deserializer=auth_dot_auth__pb2.GetByOrgReply.FromString,
+        )
+    self.GetByWorkspace = channel.unary_unary(
+        '/chaosplatform.auth.AuthService/GetByWorkspace',
+        request_serializer=auth_dot_auth__pb2.GetByWorkspaceRequest.SerializeToString,
+        response_deserializer=auth_dot_auth__pb2.GetByWorkspaceReply.FromString,
+        )
     self.GetByJti = channel.unary_unary(
         '/chaosplatform.auth.AuthService/GetByJti',
         request_serializer=auth_dot_auth__pb2.GetByJtiRequest.SerializeToString,
@@ -97,6 +107,20 @@ class AuthServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def GetByOrg(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetByWorkspace(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
   def GetByJti(self, request, context):
     # missing associated documentation comment in .proto file
     pass
@@ -136,6 +160,16 @@ def add_AuthServiceServicer_to_server(servicer, server):
           servicer.GetByUser,
           request_deserializer=auth_dot_auth__pb2.GetByUserRequest.FromString,
           response_serializer=auth_dot_auth__pb2.GetByUserReply.SerializeToString,
+      ),
+      'GetByOrg': grpc.unary_unary_rpc_method_handler(
+          servicer.GetByOrg,
+          request_deserializer=auth_dot_auth__pb2.GetByOrgRequest.FromString,
+          response_serializer=auth_dot_auth__pb2.GetByOrgReply.SerializeToString,
+      ),
+      'GetByWorkspace': grpc.unary_unary_rpc_method_handler(
+          servicer.GetByWorkspace,
+          request_deserializer=auth_dot_auth__pb2.GetByWorkspaceRequest.FromString,
+          response_serializer=auth_dot_auth__pb2.GetByWorkspaceReply.SerializeToString,
       ),
       'GetByJti': grpc.unary_unary_rpc_method_handler(
           servicer.GetByJti,

@@ -16,10 +16,10 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='registration/registration.proto',
-  package='chaoshub.registration',
+  package='chaosplatform.registration',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x1fregistration/registration.proto\x12\x15\x63haoshub.registration\"\x8c\x01\n\x0cRegistration\x12\n\n\x02id\x18\x01 \x01(\t\x12\x10\n\x08username\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\r\n\x05\x65mail\x18\x04 \x01(\t\x12\x18\n\x10is_authenticated\x18\x05 \x01(\x08\x12\x11\n\tis_active\x18\x06 \x01(\x08\x12\x14\n\x0cis_anonymous\x18\x07 \x01(\x08\">\n\rCreateRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\r\n\x05\x65mail\x18\x03 \x01(\t\"H\n\x0b\x43reateReply\x12\x39\n\x0cregistration\x18\x01 \x01(\x0b\x32#.chaoshub.registration.Registration\"\x1b\n\rDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\t\"\r\n\x0b\x44\x65leteReply\"\x1c\n\x0eGetByIdRequest\x12\n\n\x02id\x18\x01 \x01(\t\"I\n\x0cGetByIdReply\x12\x39\n\x0cregistration\x18\x01 \x01(\x0b\x32#.chaoshub.registration.Registration2\x94\x02\n\x13RegistrationService\x12R\n\x06\x43reate\x12$.chaoshub.registration.CreateRequest\x1a\".chaoshub.registration.CreateReply\x12R\n\x06\x44\x65lete\x12$.chaoshub.registration.DeleteRequest\x1a\".chaoshub.registration.DeleteReply\x12U\n\x07GetById\x12%.chaoshub.registration.GetByIdRequest\x1a#.chaoshub.registration.GetByIdReplyb\x06proto3')
+  serialized_pb=_b('\n\x1fregistration/registration.proto\x12\x1a\x63haosplatform.registration\"\x8c\x01\n\x0cRegistration\x12\n\n\x02id\x18\x01 \x01(\t\x12\x10\n\x08username\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\r\n\x05\x65mail\x18\x04 \x01(\t\x12\x18\n\x10is_authenticated\x18\x05 \x01(\x08\x12\x11\n\tis_active\x18\x06 \x01(\x08\x12\x14\n\x0cis_anonymous\x18\x07 \x01(\x08\">\n\rCreateRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\r\n\x05\x65mail\x18\x03 \x01(\t\"M\n\x0b\x43reateReply\x12>\n\x0cregistration\x18\x01 \x01(\x0b\x32(.chaosplatform.registration.Registration\"\x1b\n\rDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\t\"\r\n\x0b\x44\x65leteReply\"\x1c\n\x0eGetByIdRequest\x12\n\n\x02id\x18\x01 \x01(\t\"N\n\x0cGetByIdReply\x12>\n\x0cregistration\x18\x01 \x01(\x0b\x32(.chaosplatform.registration.Registration2\xb2\x02\n\x13RegistrationService\x12\\\n\x06\x43reate\x12).chaosplatform.registration.CreateRequest\x1a\'.chaosplatform.registration.CreateReply\x12\\\n\x06\x44\x65lete\x12).chaosplatform.registration.DeleteRequest\x1a\'.chaosplatform.registration.DeleteReply\x12_\n\x07GetById\x12*.chaosplatform.registration.GetByIdRequest\x1a(.chaosplatform.registration.GetByIdReplyb\x06proto3')
 )
 
 
@@ -27,55 +27,55 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _REGISTRATION = _descriptor.Descriptor(
   name='Registration',
-  full_name='chaoshub.registration.Registration',
+  full_name='chaosplatform.registration.Registration',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='chaoshub.registration.Registration.id', index=0,
+      name='id', full_name='chaosplatform.registration.Registration.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='username', full_name='chaoshub.registration.Registration.username', index=1,
+      name='username', full_name='chaosplatform.registration.Registration.username', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='chaoshub.registration.Registration.name', index=2,
+      name='name', full_name='chaosplatform.registration.Registration.name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='email', full_name='chaoshub.registration.Registration.email', index=3,
+      name='email', full_name='chaosplatform.registration.Registration.email', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='is_authenticated', full_name='chaoshub.registration.Registration.is_authenticated', index=4,
+      name='is_authenticated', full_name='chaosplatform.registration.Registration.is_authenticated', index=4,
       number=5, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='is_active', full_name='chaoshub.registration.Registration.is_active', index=5,
+      name='is_active', full_name='chaosplatform.registration.Registration.is_active', index=5,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='is_anonymous', full_name='chaoshub.registration.Registration.is_anonymous', index=6,
+      name='is_anonymous', full_name='chaosplatform.registration.Registration.is_anonymous', index=6,
       number=7, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -93,34 +93,34 @@ _REGISTRATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=59,
-  serialized_end=199,
+  serialized_start=64,
+  serialized_end=204,
 )
 
 
 _CREATEREQUEST = _descriptor.Descriptor(
   name='CreateRequest',
-  full_name='chaoshub.registration.CreateRequest',
+  full_name='chaosplatform.registration.CreateRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='username', full_name='chaoshub.registration.CreateRequest.username', index=0,
+      name='username', full_name='chaosplatform.registration.CreateRequest.username', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='chaoshub.registration.CreateRequest.name', index=1,
+      name='name', full_name='chaosplatform.registration.CreateRequest.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='email', full_name='chaoshub.registration.CreateRequest.email', index=2,
+      name='email', full_name='chaosplatform.registration.CreateRequest.email', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -138,20 +138,20 @@ _CREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=201,
-  serialized_end=263,
+  serialized_start=206,
+  serialized_end=268,
 )
 
 
 _CREATEREPLY = _descriptor.Descriptor(
   name='CreateReply',
-  full_name='chaoshub.registration.CreateReply',
+  full_name='chaosplatform.registration.CreateReply',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='registration', full_name='chaoshub.registration.CreateReply.registration', index=0,
+      name='registration', full_name='chaosplatform.registration.CreateReply.registration', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -169,20 +169,20 @@ _CREATEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=265,
-  serialized_end=337,
+  serialized_start=270,
+  serialized_end=347,
 )
 
 
 _DELETEREQUEST = _descriptor.Descriptor(
   name='DeleteRequest',
-  full_name='chaoshub.registration.DeleteRequest',
+  full_name='chaosplatform.registration.DeleteRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='chaoshub.registration.DeleteRequest.id', index=0,
+      name='id', full_name='chaosplatform.registration.DeleteRequest.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -200,14 +200,14 @@ _DELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=339,
-  serialized_end=366,
+  serialized_start=349,
+  serialized_end=376,
 )
 
 
 _DELETEREPLY = _descriptor.Descriptor(
   name='DeleteReply',
-  full_name='chaoshub.registration.DeleteReply',
+  full_name='chaosplatform.registration.DeleteReply',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -224,20 +224,20 @@ _DELETEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=368,
-  serialized_end=381,
+  serialized_start=378,
+  serialized_end=391,
 )
 
 
 _GETBYIDREQUEST = _descriptor.Descriptor(
   name='GetByIdRequest',
-  full_name='chaoshub.registration.GetByIdRequest',
+  full_name='chaosplatform.registration.GetByIdRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='chaoshub.registration.GetByIdRequest.id', index=0,
+      name='id', full_name='chaosplatform.registration.GetByIdRequest.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -255,20 +255,20 @@ _GETBYIDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=383,
-  serialized_end=411,
+  serialized_start=393,
+  serialized_end=421,
 )
 
 
 _GETBYIDREPLY = _descriptor.Descriptor(
   name='GetByIdReply',
-  full_name='chaoshub.registration.GetByIdReply',
+  full_name='chaosplatform.registration.GetByIdReply',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='registration', full_name='chaoshub.registration.GetByIdReply.registration', index=0,
+      name='registration', full_name='chaosplatform.registration.GetByIdReply.registration', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -286,8 +286,8 @@ _GETBYIDREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=413,
-  serialized_end=486,
+  serialized_start=423,
+  serialized_end=501,
 )
 
 _CREATEREPLY.fields_by_name['registration'].message_type = _REGISTRATION
@@ -304,49 +304,49 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 Registration = _reflection.GeneratedProtocolMessageType('Registration', (_message.Message,), dict(
   DESCRIPTOR = _REGISTRATION,
   __module__ = 'registration.registration_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.registration.Registration)
+  # @@protoc_insertion_point(class_scope:chaosplatform.registration.Registration)
   ))
 _sym_db.RegisterMessage(Registration)
 
 CreateRequest = _reflection.GeneratedProtocolMessageType('CreateRequest', (_message.Message,), dict(
   DESCRIPTOR = _CREATEREQUEST,
   __module__ = 'registration.registration_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.registration.CreateRequest)
+  # @@protoc_insertion_point(class_scope:chaosplatform.registration.CreateRequest)
   ))
 _sym_db.RegisterMessage(CreateRequest)
 
 CreateReply = _reflection.GeneratedProtocolMessageType('CreateReply', (_message.Message,), dict(
   DESCRIPTOR = _CREATEREPLY,
   __module__ = 'registration.registration_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.registration.CreateReply)
+  # @@protoc_insertion_point(class_scope:chaosplatform.registration.CreateReply)
   ))
 _sym_db.RegisterMessage(CreateReply)
 
 DeleteRequest = _reflection.GeneratedProtocolMessageType('DeleteRequest', (_message.Message,), dict(
   DESCRIPTOR = _DELETEREQUEST,
   __module__ = 'registration.registration_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.registration.DeleteRequest)
+  # @@protoc_insertion_point(class_scope:chaosplatform.registration.DeleteRequest)
   ))
 _sym_db.RegisterMessage(DeleteRequest)
 
 DeleteReply = _reflection.GeneratedProtocolMessageType('DeleteReply', (_message.Message,), dict(
   DESCRIPTOR = _DELETEREPLY,
   __module__ = 'registration.registration_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.registration.DeleteReply)
+  # @@protoc_insertion_point(class_scope:chaosplatform.registration.DeleteReply)
   ))
 _sym_db.RegisterMessage(DeleteReply)
 
 GetByIdRequest = _reflection.GeneratedProtocolMessageType('GetByIdRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETBYIDREQUEST,
   __module__ = 'registration.registration_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.registration.GetByIdRequest)
+  # @@protoc_insertion_point(class_scope:chaosplatform.registration.GetByIdRequest)
   ))
 _sym_db.RegisterMessage(GetByIdRequest)
 
 GetByIdReply = _reflection.GeneratedProtocolMessageType('GetByIdReply', (_message.Message,), dict(
   DESCRIPTOR = _GETBYIDREPLY,
   __module__ = 'registration.registration_pb2'
-  # @@protoc_insertion_point(class_scope:chaoshub.registration.GetByIdReply)
+  # @@protoc_insertion_point(class_scope:chaosplatform.registration.GetByIdReply)
   ))
 _sym_db.RegisterMessage(GetByIdReply)
 
@@ -354,16 +354,16 @@ _sym_db.RegisterMessage(GetByIdReply)
 
 _REGISTRATIONSERVICE = _descriptor.ServiceDescriptor(
   name='RegistrationService',
-  full_name='chaoshub.registration.RegistrationService',
+  full_name='chaosplatform.registration.RegistrationService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=489,
-  serialized_end=765,
+  serialized_start=504,
+  serialized_end=810,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',
-    full_name='chaoshub.registration.RegistrationService.Create',
+    full_name='chaosplatform.registration.RegistrationService.Create',
     index=0,
     containing_service=None,
     input_type=_CREATEREQUEST,
@@ -372,7 +372,7 @@ _REGISTRATIONSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='Delete',
-    full_name='chaoshub.registration.RegistrationService.Delete',
+    full_name='chaosplatform.registration.RegistrationService.Delete',
     index=1,
     containing_service=None,
     input_type=_DELETEREQUEST,
@@ -381,7 +381,7 @@ _REGISTRATIONSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetById',
-    full_name='chaoshub.registration.RegistrationService.GetById',
+    full_name='chaosplatform.registration.RegistrationService.GetById',
     index=2,
     containing_service=None,
     input_type=_GETBYIDREQUEST,
